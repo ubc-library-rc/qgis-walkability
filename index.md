@@ -7,7 +7,6 @@ nav_order: 1
 
 This workshop aims at estimating and visualizing a walkability index by processing open data from the [City of Vancouver](https://opendata.vancouver.ca/pages/home/) with spatial network analysis.
 
-Why, When and How?
 <a href="slides.html" target="blank" >Introduction to Walkability Modelling in GIS</a>
 
 <div style="overflow: hidden;
@@ -24,4 +23,4 @@ Why, When and How?
  </iframe>
 </div>
 
-Walkability means the ability of spaces to facilitate walking.
+Following the steps on the left, you'll learn to calculate walkability in QGIS.
