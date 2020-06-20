@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Visualize
+title: 4. Visualize
 nav_order: 6
 ---
 
-Explore visualization
-Display walkability graduated
-Add basemap
-Change basemap to black and white
-Add overlay effect
+* Explore visualization
+  * Display walkability graduated
+  * Add different basemaps
+  * Change basemap to black and white
+  * Explore overlay effects
