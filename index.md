@@ -24,4 +24,4 @@ Why, When and How?
  </iframe>
 </div>
 
-Generally, walkability means the ability of spaces to facilitate walking.
+Walkability means the ability of spaces to facilitate walking.
