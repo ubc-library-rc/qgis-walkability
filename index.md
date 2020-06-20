@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Title of page
+title: Overview
 nav_order: 1
 ---
 ## Note: this workshop is in development and not yet complete.
 
-<a href="slides.html" target="_blank">View slides in new tab</a>
+<a href="slides.html" target="blank" >Walkability Modelling</a>
 
 <div style="overflow: hidden;
   padding-top: 56.25%;
