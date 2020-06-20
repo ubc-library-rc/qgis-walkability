@@ -8,7 +8,7 @@ nav_order: 1
 This workshop aims at estimating and visualizing a walkability index by processing open data from the [City of Vancouver](https://opendata.vancouver.ca/pages/home/) with spatial network analysis.
 
 Why, When and How?
-<a href="slides.html" target="blank" >Introduction to Walkability Modelling in GIS</a>
+<a href="content/slides.html" target="blank" >Introduction to Walkability Modelling in GIS</a>
 
 <div style="overflow: hidden;
   padding-top: 56.25%;
