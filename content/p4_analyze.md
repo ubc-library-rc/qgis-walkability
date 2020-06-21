@@ -22,7 +22,7 @@ nav_order: 4
 
   * Calculate land use diversity
     ```
-    "Id_unique" / "Id_sum"
+    "businesstype_unique" / "Id_sum"
     ```
   * Calculate intersection density
     ```
