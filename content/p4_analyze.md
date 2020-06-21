@@ -6,7 +6,7 @@ nav_order: 4
 
 - Network analysis
   * Service area from sample centroids
-  ![800m Buffer Radius](/images/map_buffers.png)
+  ![800m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
   * Join attributes from intersections layer
     * id
     * count
