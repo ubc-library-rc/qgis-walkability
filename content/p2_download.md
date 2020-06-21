@@ -16,4 +16,4 @@ The geospatial data used in the workshop can be downloaded in .GeoJSON format fr
 
 The street network can be downloaded from inside QGIS using a plugin called QuickOSM. Open QGIS and create a new blank project. QuickOSM can be downloaded by accessing the "Plugins" tab and clicking on "Manage and Install Plugins...". Search for "QuickOSM" and click on "Install Plugin" at the bottom right of the window.
 
-* Download street network from OSM using QuickOSM
+* Download street network from OSM using [QuickOSM](https://plugins.qgis.org/plugins/QuickOSM/)

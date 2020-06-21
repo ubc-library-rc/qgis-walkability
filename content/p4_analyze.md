@@ -17,5 +17,7 @@ nav_order: 4
       * mean
   * Save network buffer to gpkg
 - Calculate index
-  * Field calculator
-  * Calculate diversity of business types (expression)
+  * Calculate intersection density
+  `"id_count" / $length`
+
+  * Field calculator (2*"intrs_den" + "pop_den_mean" + )
