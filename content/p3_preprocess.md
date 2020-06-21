@@ -4,14 +4,14 @@ title: 2. Preprocess
 nav_order: 3
 ---
 
-2.1 Pre process samples
+- Pre process samples
   * Reproject boundaries
   * Reproject samples
   * Extract samples within boundaries
   * Get centroids of samples
   * Buffer and dissolve centroids (800m)
   * Save Blocks, Centroids and Boundary to GeoPackage
-2.2 Pre process street network
+- Pre process street network
   * Reproject line geometry
   * Fix street line geometries
   * Extract line intersections
@@ -21,12 +21,12 @@ nav_order: 3
   * Buffer intersection to create a polygon
   * Extract intersections within boundary
   * Save Intersections to GeoPackage
-2.3 Pre process dissemination area
+- Pre process dissemination area
   * Open census DA
   * Fix census polygon geometries
   * Extract DAs within boundary
   * Save Census to GeoPackage
-2.4 Pre process business licenses
+- Pre process business licenses
   * Filter valid licenses by expression
   * "expireddate" >  to_date('2020-06-13’)
   * Reproject business licenses
