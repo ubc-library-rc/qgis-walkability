@@ -4,7 +4,7 @@ title: 3. Analyze
 nav_order: 4
 ---
 
-* Network analysis
+3.1 Network analysis
   * Service area from sample centroids
   * Join attributes from intersections layer
     * id
@@ -16,6 +16,6 @@ nav_order: 4
       * population density
       * mean
   * Save network buffer to gpkg
-* Calculate index
+3.2 Calculate index
   * Field calculator
   * Calculate diversity of business types (expression)
