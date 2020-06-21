@@ -5,8 +5,8 @@ nav_order: 4
 ---
 
 - Network analysis
-  * Service area from sample centroids (800m buffers)
-  <img src="images/map_buffers.png">
+  * Service area from sample centroids
+  ![800m Buffer Radius](/images/map_buffers.png)
   * Join attributes from intersections layer
     * id
     * count
@@ -30,4 +30,5 @@ nav_order: 4
     ```
   * Celculate walkability Index
     ```
-    2*"intrs_den" + "pop_den_mean" + "use_div" + "Id_count"`
+    2*"intrs_den" + "pop_den_mean" + "use_div" + "Id_count"
+    ```
