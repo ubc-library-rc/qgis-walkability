@@ -11,7 +11,7 @@ nav_order: 3
   * Get centroids of samples
   * Buffer and dissolve centroids (800m)
   * Save Blocks, Centroids and Boundary to GeoPackage
-  ![Preprocess samples]()
+  ![Preprocess samples](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_samples.png?raw=true)
 - Pre process street network
   * Reproject line geometry
   * Fix street line geometries
@@ -22,7 +22,7 @@ nav_order: 3
   * Buffer intersection to create a polygon
   * Extract intersections within boundary
   * Save Intersections to GeoPackage
-  ![Preprocess streets]()
+  ![Preprocess streets](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_intersections.png?raw=true)
 - Pre process dissemination area
   * Open census DA
   * Fix census polygon geometries
