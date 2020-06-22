@@ -28,7 +28,9 @@ nav_order: 3
   * Save Census to GeoPackage
 - Pre process business licenses
   * Filter valid licenses by expression
-  * "expireddate" >  to_date('2020-06-13’)
+  ```
+  "expireddate" >  to_date('2020-06-13’)
+  ```
   * Reproject business licenses
   * Extract points within analyzed boundary
   * Buffer business without dissolve (50)
