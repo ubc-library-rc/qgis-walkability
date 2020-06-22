@@ -11,6 +11,7 @@ nav_order: 3
   * Get centroids of samples
   * Buffer and dissolve centroids (800m)
   * Save Blocks, Centroids and Boundary to GeoPackage
+  ![Preprocess samples]()
 - Pre process street network
   * Reproject line geometry
   * Fix street line geometries
@@ -21,6 +22,7 @@ nav_order: 3
   * Buffer intersection to create a polygon
   * Extract intersections within boundary
   * Save Intersections to GeoPackage
+  ![Preprocess streets]()
 - Pre process dissemination area
   * Open census DA
   * Fix census polygon geometries
