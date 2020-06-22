@@ -30,7 +30,8 @@ nav_order: 4
     ```
   * Calculate number of retail (ret_count)
     ```
-
+    "businesstype = 'Retail Dealer'
+    count("Id")
     ```
   * Calculate Z-scores
     ```
@@ -41,5 +42,5 @@ nav_order: 4
     ```
   * Calculate walkability Index
     ```
-    2*"z_intrs_den" + "z_pop_den_mean" + "z_use_div" + "z_ret_count"
+    2 * "z_intrs_den" + "z_pop_den_mean" + "z_use_div" + "z_ret_count"
     ```
