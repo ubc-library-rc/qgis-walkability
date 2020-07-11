@@ -6,27 +6,27 @@ nav_order: 4
 
 Network analysis
 {: .label .label-step}
-* <b>Service area (from layer)</b>
-*Input*{: .circle .circle-blue} : <b>sample_centroids</b>
+- *.*{: .circle .circle-blue} <b>Service area (from layer)</b>
+  * Input: <b>sample_centroids</b>
+  * Output:
 ![800m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
 {: .step}
 
 Spatial join
 {: .label .label-step}
-- {: .circle .circle-blue} <b>Join attributes by location</b> from <i>intersections</i> layer
-* Field: "id"
-* Operation: 'count'
-- {: .circle .circle-blue} <b>Join attributes by location</b> from <i>business</i> layer
-* Fields: "Id" and "businesstype"
-* Operations: 'count', 'unique', 'sum'
-- {: .circle .circle-blue} <b>Join attributes by location</b> from <i>dissemination_area</i> layer
-* Field: "population density"
-* Operation: 'mean'
-Save network buffers to gpkg
+- *.*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>intersections</i> layer
+  * Field: "id"
+  * Operation: 'count'
+- *.*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>business</i> layer
+  * Fields: "Id" and "businesstype"
+  * Operations: 'count', 'unique', 'sum'
+- *.*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>dissemination_area</i> layer
+  * Field: "population density"
+  * Operation: 'mean'
+- Save network buffers to gpkg
 {: .step}
 
-Calculate indicators
-{: .label .label-step}
+- Calculate indicators
 * Use <b>Field calculator</b> to estimate land use diversity (use_div)
   ```
   "businesstype_unique" / "Id_sum"
@@ -51,4 +51,3 @@ Calculate indicators
   ```
   2 * "z_intrs_den" + "z_pop_den_mean" + "z_use_div" + "z_ret_count"
   ```
-{: .step}
