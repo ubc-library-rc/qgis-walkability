@@ -27,27 +27,30 @@ Spatial join
 {: .step}
 
 - Calculate indicators
-* Use <b>Field calculator</b> to estimate land use diversity (use_div)
+{: .label .label-step}
+{: .step}
+
+*1*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate land use diversity (use_div)
   ```
   "businesstype_unique" / "Id_sum"
   ```
-* Use <b>Field calculator</b> to estimate intersection density (intrs_den)
+*2*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate intersection density (intrs_den)
   ```
   "id_count" / $length
   ```
-* Use <b>Field calculator</b> to estimate number of retail (ret_count)
+*3*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate number of retail (ret_count)
   ```
   "businesstype = 'Retail Dealer'
   count("Id")
   ```
-* Use <b>Field calculator</b> to calculate Z-scores
+*4*{: .circle .circle-blue} Use <b>Field calculator</b> to calculate Z-scores
   ```
   ("intrs_den" - mean("intrs_den")) / std("intrs_den")
   ("use_div" - mean("use_div")) / std("use_div")
   ("pop_den_mean" - mean("pop_den_mean")) / std("pop_den_mean")
   ("ret_count" - mean("ret_count")) / std("ret_count")
   ```
-* Use <b>Field calculator</b> to sum all normalized indicators
+*5*{: .circle .circle-blue} Use <b>Field calculator</b> to sum all normalized indicators
   ```
   2 * "z_intrs_den" + "z_pop_den_mean" + "z_use_div" + "z_ret_count"
   ```
