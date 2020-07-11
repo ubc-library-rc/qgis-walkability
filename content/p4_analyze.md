@@ -13,13 +13,13 @@ Input: <b>sample_centroids</b>
 
 Spatial join
 {: .label .label-step}
-<b>Join attributes by location</b> from <i>intersections</i> layer
+*1*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>intersections</i> layer
 * Field: "id"
 * Operation: 'count'
-<b>Join attributes by location</b> from <i>business</i> layer
+*2*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>business</i> layer
 * Fields: "Id" and "businesstype"
 * Operations: 'count', 'unique', 'sum'
-<b>Join attributes by location</b> from <i>dissemination_area</i> layer
+*3*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>dissemination_area</i> layer
 * Field: "population density"
 * Operation: 'mean'
 Save network buffers to gpkg
