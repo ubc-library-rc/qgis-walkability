@@ -6,9 +6,10 @@ nav_order: 4
 
 Network analysis
 {: .label .label-step}
-- *.*{: .circle .circle-blue} <b>Service area (from layer)</b>
-  * Input: <b>sample_centroids</b>
-  * Output:
+- <b>Service area (from layer)</b>
+  * <em>Vector layer representing the network</em>: <b>street_network</b>
+  * <em>Vector layer with start points</em>: <b>sample_centroids</b>
+  * <em>Travel cost</em>: 800
 ![800m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
 {: .step}
 
@@ -26,9 +27,6 @@ Spatial join
 - Save network buffers to gpkg
 {: .step}
 
-- Calculate indicators
-{: .label .label-step}
-{: .step}
 
 *1*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate land use diversity (use_div)
   ```
