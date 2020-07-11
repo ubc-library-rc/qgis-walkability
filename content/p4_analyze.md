@@ -6,49 +6,48 @@ nav_order: 4
 
 Network analysis
 {: .label .label-step}
-- Service area (from layer)
-  * Input: sample_centroids
+* <b>Service area (from layer)</b>
+Input: <b>sample_centroids</b>
 ![800m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
 {: .step}
 
 Spatial join
 {: .label .label-step}
-- Join attributes from by location
-* Input: <b>intersections</b>
-  * id
-  * count
-* Join attributes from business layer
-  * Id, businesstype
-  * count, unique, sum
-* Join attributes from census DA layer
-  * population density
-  * mean
-* Save network buffer to gpkg
+<b>Join attributes by location</b> from <i>intersections</i> layer
+* Field: "id"
+* Operation: 'count'
+<b>Join attributes by location</b> from <i>business</i> layer
+* Fields: "Id" and "businesstype"
+* Operations: 'count', 'unique', 'sum'
+<b>Join attributes by location</b> from <i>dissemination_area</i> layer
+* Field: "population density"
+* Operation: 'mean'
+Save network buffers to gpkg
 {: .step}
 
 Calculate indicators
 {: .label .label-step}
-* Calculate land use diversity (use_div)
+* Use <b>Field calculator</b> to estimate land use diversity (use_div)
   ```
   "businesstype_unique" / "Id_sum"
   ```
-* Calculate intersection density (intrs_den)
+* Use <b>Field calculator</b> to estimate intersection density (intrs_den)
   ```
   "id_count" / $length
   ```
-* Calculate number of retail (ret_count)
+* Use <b>Field calculator</b> to estimate number of retail (ret_count)
   ```
   "businesstype = 'Retail Dealer'
   count("Id")
   ```
-* Calculate Z-scores
+* Use <b>Field calculator</b> to calculate Z-scores
   ```
   ("intrs_den" - mean("intrs_den")) / std("intrs_den")
   ("use_div" - mean("use_div")) / std("use_div")
   ("pop_den_mean" - mean("pop_den_mean")) / std("pop_den_mean")
   ("ret_count" - mean("ret_count")) / std("ret_count")
   ```
-* Calculate walkability Index
+* Use <b>Field calculator</b> to sum all normalized indicators
   ```
   2 * "z_intrs_den" + "z_pop_den_mean" + "z_use_div" + "z_ret_count"
   ```

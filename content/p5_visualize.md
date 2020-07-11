@@ -4,8 +4,10 @@ title: 4. Visualize
 nav_order: 6
 ---
 
-- Explore visualization
-  * Display walkability graduated
-  * Add different basemaps
-  * Change basemap to black and white
-  * Explore overlay effects
+Explore visualizations
+{: .label .label-step}
+* Display walkability index using graduated scheme
+* Add Google Satellite basemap
+* Change basemap to black and white
+* Explore overlay effect
+{: .step}

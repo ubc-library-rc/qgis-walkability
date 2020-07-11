@@ -6,35 +6,35 @@ nav_order: 3
 
 Preprocess samples
 {: .label .label-step}
-* Reproject boundaries
-* Reproject samples
-* Extract samples within boundaries
-* Get centroids of samples
-* Buffer and dissolve centroids (800m)
-* Save Blocks, Centroids and Boundary to GeoPackage
+* <b>Reproject</b> boundaries
+* <b>Reproject</b> samples
+* <b>Extract by location</b> samples within boundaries
+* Get <b>Centroid</b> of samples
+* <b>Buffer</b> and dissolve centroids (800m)
+* Drag and drop Blocks, Centroids and Boundary layers to GeoPackage
 ![Preprocess samples](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_samples.png?raw=true)
 {: .step}
 
 Pre process street network
 {: .label .label-step}
-* Reproject line geometry
-* Fix street line geometries
+* <b>Reproject</b> line geometry
+* <b>Fix geometries</b> of street centerline layer
 * Extract line intersections
-* Buffer and dissolve intersections
-* Convert to single-parts
-* Find centroids of buffers
-* Buffer intersection to create a polygon
-* Extract intersections within boundary
-* Save Intersections to GeoPackage
+* <b>Buffer</b> and dissolve intersections (15m)
+* Convert from <b>Multipart to singleparts</b>
+* Find <b>Centroid</b> of buffers
+* <b>Buffer</b> intersection to create a polygon
+* <b>Extract by locations</b> intersections within boundary
+* Drag and drop Intersections to GeoPackage
 ![Preprocess streets](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_intersections.png?raw=true)
 {: .step}
 
 Pre process dissemination area
 {: .label .label-step}
 * Open census DA
-* Fix census polygon geometries
-* Extract DAs within boundary
-* Save Census to GeoPackage
+* <b>Fix geometries</b> from census polygon
+* <b>Extract by location</b> DAs within boundary
+* Drag and drop Census to GeoPackage
 {: .step}
 
 Pre process business licenses
@@ -43,8 +43,8 @@ Pre process business licenses
 ```
 "expireddate" >  to_date('2020-06-13’)
 ```
-* Reproject business licenses
-* Extract points within analyzed boundary
-* Buffer business without dissolve (50)
-* Save Businesses to GeoPackage
+* <b>Reproject</b> business licenses
+* <b>Extract by locations</b> points within analyzed boundary
+* <b>Buffer</b> business without dissolve (50)
+* Drag and drop Businesses to GeoPackage
 {: .step}
