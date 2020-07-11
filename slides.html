@@ -41,14 +41,47 @@
 		<div class="slides">
 
       <section>
-        <h2>What Is Walkability?</h2>
+        <h2>Spatial Network Analysis</h2>
+      </section>
+
+      <section>
+        <h4>Spatial Network</h4>
+        <p>A <b>graph</b> whose edges and nodes are spatial elements</p>
+      </section>
+
+
+
+      <section>
+        <h2>Types of spatial network analysis</h2>
+      </section>
+
+      <section>
+        <img src="images/graph_shortest.png" width="600">
+        <p> Shortest paths: one element in relation to another </p>
+      </section>
+
+      <section>
+        <img width="600" src="images/graph_network.png">
+        <p> Centrality: all elements in relation to each other </p>
+      </section>
+
+      <section>
+        <img src="images/graph_buffer.png" width="600">
+        <p> Service area: reach from an element along the network </p>
+      </section>
+
+      <section>
+        <h2>Walkability case study</h2>
       </section>
 
       <section>
         <div style="width:1400px;position:relative;">
           <table width="600" align="left" cellpadding="0" cellspacing="0" style="margin-top:140px;">
             <tr>
-              <td style="float: inline-start; font-size:70%;" align="right">Walkability is the ability of spaces to support walking in detriment of other transport modes.</td>
+              <td style="float: inline-start; font-size:70%;" align="right">Walkability is the ability of spaces to support walking in detriment of other transport modes.<br></td>
+            </tr>
+            <tr>
+              <td style="float: inline-start; font-size:70%;" align="right">Elements located within walkable distances tend to influence how much people walk.</td>
             </tr>
           </table>
           <table width="400" align="left" cellpadding="0" cellspacing="0" style="margin-right:10px;">
@@ -118,32 +151,13 @@
 
       <section>
         <div class="r-hstack">
-          <ul style="text-align:left;font-size:70%;">
+          <ul style="text-align:left;font-size:80%;">
             <li>Neighborhood Quality on US cities <a href="https://bjsm.bmj.com/content/44/13/924" target="_blank">(Frank et al. 2010)</a></li>
-              <ul style="font-size:80%;">
+              <ul style="font-size:100%;">
                 <li>Intersection density</li>
-                <li>Residential density + Retail floor area ratio</li>
+                <li>Residential density</li>
+                <li>Retail floor area ratio</li>
                 <li>Land use mix</li>
-              </ul>
-              <br>
-            <li>Journey to Work in Toronto <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0085295" target="_blank">(Glazier et al. 2012)</a></li>
-              <ul style="font-size:80%;">
-                <li>Street connectivity</li>
-                <li>Population density + Dwelling density + Walkable retail</li>
-              </ul>
-              <br>
-            <li>Neighborhood Walkability Index in London <a href="https://discovery.ucl.ac.uk/id/eprint/1505643/" target="_blank">(Stockton 2016)</a></li>
-              <ul style="font-size:80%;">
-                <li>Street connectivity</li>
-                <li>Dwelling density</li>
-                <li>Land use mix</li>
-              </ul>
-              <br>
-            <li>Pedestrian Index of Environment <a href="https://www.sciencedirect.com/science/article/pii/S1361920916309488?casa_token=iqAXBMLUQvMAAAAA:L8ZiesbqbeSYd_MkA8ilEK_r2A7j7grLX-7Oj2gorf2RVIjlzZAF3_uj_6Qc7SMWRNPdjnDIkQ" target="_blank">(Lefebrve-Ropas 2017)</a></li>
-              <ul style="font-size:80%;">
-                <li>Block size</li>
-                <li>Population density + Number of public transit stops</li>
-                <li>Businesses locations</li>
               </ul>
               <br>
           </ul>
