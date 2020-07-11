@@ -7,19 +7,19 @@ nav_order: 4
 Network analysis
 {: .label .label-step}
 * <b>Service area (from layer)</b>
-Input: <b>sample_centroids</b>
+*Input*{: .circle .circle-blue} : <b>sample_centroids</b>
 ![800m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
 {: .step}
 
 Spatial join
 {: .label .label-step}
-*1*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>intersections</i> layer
+- {: .circle .circle-blue} <b>Join attributes by location</b> from <i>intersections</i> layer
 * Field: "id"
 * Operation: 'count'
-*2*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>business</i> layer
+- {: .circle .circle-blue} <b>Join attributes by location</b> from <i>business</i> layer
 * Fields: "Id" and "businesstype"
 * Operations: 'count', 'unique', 'sum'
-*3*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>dissemination_area</i> layer
+- {: .circle .circle-blue} <b>Join attributes by location</b> from <i>dissemination_area</i> layer
 * Field: "population density"
 * Operation: 'mean'
 Save network buffers to gpkg
