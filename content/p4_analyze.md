@@ -15,14 +15,13 @@ Network analysis
 
 Spatial join
 {: .label .label-step}
-<br>
-{: .circle .circle-blue} <b>Join attributes by location</b> from <i>intersections</i> layer
+- <b>Join attributes by location</b> from <i>intersections</i> layer
   * Field: "id"
   * Operation: 'count' <br>
-{: .circle .circle-blue} <b>Join attributes by location</b> from <i>business</i> layer
+- <b>Join attributes by location</b> from <i>business</i> layer
   * Fields: "Id" and "businesstype"
   * Operations: 'count', 'unique', 'sum'
-- *.*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>dissemination_area</i> layer
+- <b>Join attributes by location</b> from <i>dissemination_area</i> layer
   * Field: "population density"
   * Operation: 'mean'
 - Save network buffers to gpkg

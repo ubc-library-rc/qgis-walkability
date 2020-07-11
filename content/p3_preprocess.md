@@ -41,7 +41,7 @@ Pre process business licenses
 {: .label .label-step}
 * Filter valid licenses by expression
 ```
-"expireddate" >  to_date('2020-06-13’)
+"expireddate" >  to_date('2020-07-17’)
 ```
 * <b>Reproject</b> business licenses
 * <b>Extract by locations</b> points within analyzed boundary
