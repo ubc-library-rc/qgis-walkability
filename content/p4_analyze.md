@@ -6,7 +6,9 @@ nav_order: 4
 
 Network analysis
 {: .label .label-step}
-- <b>Service area (from layer)</b>
+- Connect 'Vancouver.gpkg' by right-clicking on <b>GeoPackage</b> and selecting <b>New Connection...</b>
+- Drag and drop <i>street_network</i> and <i>sample_centroids</i> from the database to QGIS canvas
+- Extract <b>Service area (from layer)</b>
   * Vector layer representing the network: <em>street_network</em>
   * Vector layer with start points: <em>sample_centroids</em>
   * Travel cost: 800

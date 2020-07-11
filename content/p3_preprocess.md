@@ -4,12 +4,16 @@ title: 2. Preprocess
 nav_order: 3
 ---
 
-Preprocess samples
+Preprocess urban blocks
 {: .label .label-step}
-* <b>Reproject</b> <i>boundaries</i>
-* <b>Reproject</b> <i>samples</i>
-* <b>Extract by location</b> samples within boundaries
-* Get <b>Centroid</b> of samples
+* Drag and drop <i>block_outlines.shp</i> to QGIS
+* Drag and drop <i>
+* <b>Reproject</b> layer <i>boundaries</i>
+* <b>Reproject</b> layer <i>block_outlines</i>
+* <b>Extract by location</b>
+  * Extract features from: <i>blocks_reprojected</i>
+  * By comparing features from: <i>boundaries_reprojected
+* Get <b>Centroid</b> of layer <i>blocks_extracted</i>
 * <b>Buffer</b> and dissolve <i>centroids</i> (800m)
 * Drag and drop Blocks, Centroids and Boundary to save layers on GeoPackage
 ![Preprocess samples](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_samples.png?raw=true)
