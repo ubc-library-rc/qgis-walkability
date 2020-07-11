@@ -7,18 +7,19 @@ nav_order: 4
 Network analysis
 {: .label .label-step}
 - <b>Service area (from layer)</b>
-  * <em>Vector layer representing the network</em>: <b>street_network</b>
-  * <em>Vector layer with start points</em>: <b>sample_centroids</b>
-  * <em>Travel cost</em>: 800
+  * Vector layer representing the network: <em>street_network</em>
+  * Vector layer with start points: <em>sample_centroids</em>
+  * Travel cost: 800
 ![800m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
 {: .step}
 
 Spatial join
 {: .label .label-step}
-- *.*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>intersections</i> layer
+<br>
+{: .circle .circle-blue} <b>Join attributes by location</b> from <i>intersections</i> layer
   * Field: "id"
-  * Operation: 'count'
-- *.*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>business</i> layer
+  * Operation: 'count' <br>
+{: .circle .circle-blue} <b>Join attributes by location</b> from <i>business</i> layer
   * Fields: "Id" and "businesstype"
   * Operations: 'count', 'unique', 'sum'
 - *.*{: .circle .circle-blue} <b>Join attributes by location</b> from <i>dissemination_area</i> layer
@@ -27,6 +28,7 @@ Spatial join
 - Save network buffers to gpkg
 {: .step}
 
+<br>
 
 *1*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate land use diversity (use_div)
   ```
