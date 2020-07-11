@@ -6,12 +6,12 @@ nav_order: 3
 
 Preprocess samples
 {: .label .label-step}
-* <b>Reproject</b> boundaries
-* <b>Reproject</b> samples
+* <b>Reproject</b> <i>boundaries</i>
+* <b>Reproject</b> <i>samples</i>
 * <b>Extract by location</b> samples within boundaries
 * Get <b>Centroid</b> of samples
-* <b>Buffer</b> and dissolve centroids (800m)
-* Drag and drop Blocks, Centroids and Boundary layers to GeoPackage
+* <b>Buffer</b> and dissolve <i>centroids</i> (800m)
+* Drag and drop Blocks, Centroids and Boundary to save layers on GeoPackage
 ![Preprocess samples](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_samples.png?raw=true)
 {: .step}
 
@@ -25,7 +25,7 @@ Pre process street network
 * Find <b>Centroid</b> of buffers
 * <b>Buffer</b> intersection to create a polygon
 * <b>Extract by locations</b> intersections within boundary
-* Drag and drop Intersections to GeoPackage
+* Drag and drop <i>intersections</i> to save layer on GeoPackage
 ![Preprocess streets](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_intersections.png?raw=true)
 {: .step}
 
@@ -34,7 +34,7 @@ Pre process dissemination area
 * Open census DA
 * <b>Fix geometries</b> from census polygon
 * <b>Extract by location</b> DAs within boundary
-* Drag and drop Census to GeoPackage
+* Drag and drop Census to save layer on GeoPackage
 {: .step}
 
 Pre process business licenses

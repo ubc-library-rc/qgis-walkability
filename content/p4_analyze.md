@@ -24,20 +24,20 @@ Spatial join
 - <b>Join attributes by location</b> from <i>dissemination_area</i> layer
   * Field: "population density"
   * Operation: 'mean'
-- Save network buffers to gpkg
+- Save network buffers to GeoPackage
 {: .step}
 
 <br>
 
-*1*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate land use diversity (use_div)
+*1*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate land use diversity (<i>use_div</i>)
   ```
   "businesstype_unique" / "Id_sum"
   ```
-*2*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate intersection density (intrs_den)
+*2*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate intersection density (<i>intrs_den</i>)
   ```
   "id_count" / $length
   ```
-*3*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate number of retail (ret_count)
+*3*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate number of retail (<i>ret_count</i>)
   ```
   "businesstype = 'Retail Dealer'
   count("Id")
