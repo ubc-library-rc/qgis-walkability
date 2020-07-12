@@ -18,4 +18,5 @@ The street network can be downloaded from inside QGIS using a plugin called Quic
 
 * Download street network from OSM using [QuickOSM](https://plugins.qgis.org/plugins/QuickOSM/)
 
-To skip the preprocessing step download the database from [Vancouver]
+To skip the preprocessing step download the database from [Vancouver](https://github.com/ubc-library-rc/qgis-walkability/blob/master/database/Vancouver.gpkg)
+{: .warn}
