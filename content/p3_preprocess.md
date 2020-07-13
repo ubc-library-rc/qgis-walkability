@@ -29,7 +29,7 @@ Pre process street network
 * Find <b>Centroid</b> of buffers
 * <b>Buffer</b> intersection to create a polygon
 * <b>Extract by locations</b> intersections within boundary
-* Drag and drop <i>intersections</i> to save layer on GeoPackage
+* Drag and drop <i>intersections</i> to save layer on GeoPackage<br>
 ![Preprocess streets](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_intersections.png?raw=true)
 {: .step}
 
