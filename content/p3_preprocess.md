@@ -15,7 +15,7 @@ Preprocess urban blocks
   * By comparing features from: <i>boundaries_reprojected
 * Get <b>Centroid</b> of layer <i>blocks_extracted</i>
 * <b>Buffer</b> and dissolve <i>centroids</i> (800m)
-* Drag and drop Blocks, Centroids and Boundary to save layers on GeoPackage
+* Drag and drop Blocks, Centroids and Boundary to save layers on GeoPackage<br>
 ![Preprocess samples](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_samples.png?raw=true)
 {: .step}
 
