@@ -42,6 +42,6 @@ Spatial join
   * Fields: "businesstype_unique", "fid_count", "osm_id_count", "population density_mean"
 {: .step}
 
-- Save joined <i>network_buffers</i> to GeoJSON
+Save joined <i>network_buffers</i> to GeoJSON
   * Right-click on the layer > Export > Save Features As...
 {: .warn}
