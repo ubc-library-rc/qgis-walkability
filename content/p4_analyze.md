@@ -17,14 +17,14 @@ Network analysis
 
 Spatial join
 {: .label .label-step}
-- <b>Buffer</b> <i>business</i> layer
+<br><b>Buffer</b> <i>business</i> layer
   * Radius: 50
-- <b>Join attributes by location</b> from <i>business</i> layer
+<br><b>Join attributes by location</b> from <i>business</i> layer
   * Input layer: <i>network_buffers</i>
   * Join layer: <i>street_intersections</i>
   * Fields: "fid" and "businesstype"
   * Operations: 'count', 'unique'
-- <b>Buffer</b> <i>street_intersections</i> layer
+<br><b>Buffer</b> <i>street_intersections</i> layer
   * Radius: 50
 - <b>Join attributes by location</b> from <i>street_intersections</i> layer
   * Input layer: <i>network_buffers</i>
