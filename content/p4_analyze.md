@@ -17,14 +17,14 @@ Network analysis
 
 Spatial join
 {: .label .label-step}
-<br><b>Buffer</b> <i>business</i> layer
+- <b>Buffer</b> <i>business</i> layer
   * Radius: 50
-<br><b>Join attributes by location</b> from <i>business</i> layer
+- <b>Join attributes by location</b> from <i>business</i> layer
   * Input layer: <i>network_buffers</i>
   * Join layer: <i>street_intersections</i>
   * Fields: "fid" and "businesstype"
   * Operations: 'count', 'unique'
-<br><b>Buffer</b> <i>street_intersections</i> layer
+- <b>Buffer</b> <i>street_intersections</i> layer
   * Radius: 50
 - <b>Join attributes by location</b> from <i>street_intersections</i> layer
   * Input layer: <i>network_buffers</i>
@@ -42,6 +42,5 @@ Spatial join
   * Fields: "businesstype_unique", "fid_count", "osm_id_count", "population density_mean"
 {: .step}
 
-Save joined <i>network_buffers</i> to GeoJSON
-  * Right-click on the layer > Export > Save Features As...
+Save joined <i>network_buffers</i> to GeoJSON. Right-click on the layer > Export > Save Features As...
 {: .warn}
