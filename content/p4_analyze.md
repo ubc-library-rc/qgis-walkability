@@ -30,7 +30,7 @@ Spatial join
 - <b>Join attributes by location</b> from <i>census</i> layer
   * Field: "population density"
   * Operation: 'mean'
-- Save network buffers to GeoPackage
+- Save joined buffers to GeoJSON
 {: .step}
 
 <br>
