@@ -15,7 +15,11 @@ Visualize results
 
 Custom basemap
 {: .label .label-step}
-* Download QuickMapServices plugin to add basemaps
-* Change basemap to black and white
-* Try overlay effect
+- In the browser, right-click on XYZ Tiles > New Connection...
+  * Name: ESRI Satellite
+  * URL: https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}
+- Change basemap to black and white
+  * Right-click on the <i>ESRI Satellite</i> layer > Properties > Symbology > Grayscale > By lightness
+- Try layer overlay effect
+  * Right-click on the <i>urban_blocks</i> layer > Properties > Symbology > Layer rendering > Layer > Overlay
 {: .step}
