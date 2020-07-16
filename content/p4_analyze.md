@@ -7,7 +7,7 @@ nav_order: 4
 Network analysis
 {: .label .label-step}
 - Drag and drop GeoJSON files to QGIS canvas
-- Extract <b>Centroids</b> of <i>urban_blocks</i> layer
+- Extract <b>Centroids</b> from <i>urban_blocks</i> layer
 - Extract <b>Service area (from layer)</b>
   * Vector layer representing the network: <em>street_network</em>
   * Vector layer with start points: <em>block_centroids</em>
@@ -20,12 +20,12 @@ Spatial join
 - <b>Buffer</b> <i>business</i> layer
   * Radius: 50
 - <b>Join attributes by location</b> from <i>business</i> layer
-  * Fields: "Id" and "businesstype"
+  * Fields: "fid" and "businesstype"
   * Operations: 'count', 'unique'
 - <b>Buffer</b> <i>street_intersections</i> layer
   * Radius: 50
 - <b>Join attributes by location</b> from <i>street_intersections</i> layer
-  * Field: "id"
+  * Field: "osm_id"
   * Operation: 'count' <br>
 - <b>Join attributes by location</b> from <i>census</i> layer
   * Field: "population density"
@@ -37,16 +37,15 @@ Spatial join
 
 *1*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate land use diversity (<i>use_div</i>)
   ```
-  "businesstype_unique" / "Id_sum"
+  "businesstype_unique" / "fid_count"
   ```
 *2*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate intersection density (<i>intrs_den</i>)
   ```
-  "id_count" / $length
+  "osm_id_count" / $length
   ```
 *3*{: .circle .circle-blue} Use <b>Field calculator</b> to estimate number of retail (<i>ret_count</i>)
   ```
-  "businesstype = 'Retail Dealer'
-  count("Id")
+  "fid_count"
   ```
 *4*{: .circle .circle-blue} Use <b>Field calculator</b> to calculate Z-scores
   ```
