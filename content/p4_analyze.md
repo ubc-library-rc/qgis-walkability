@@ -36,12 +36,15 @@ Spatial join
   * Join layer: <i>census</i>
   * Field: "population density"
   * Operation: 'mean'
-- Save joined <i>network_buffers</i> to GeoJSON
 - Use <b>Join attributes by field value</b> to merge columns to block layer
   * Input layer: <i>urban_blocks</i>
   * Join layer: <i>network_buffers</i>
   * Fields: "businesstype_unique", "fid_count", "osm_id_count", "population density_mean"
 {: .step}
+
+- Save joined <i>network_buffers</i> to GeoJSON
+  * Right-click on the layer > Export > Save Features As...
+{: .warn}
 
 <br>
 
