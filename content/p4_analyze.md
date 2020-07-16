@@ -20,7 +20,7 @@ Spatial join
 {: .label .label-step}
 - <b>Join attributes by location</b> from <i>business</i> layer
   * Fields: "Id" and "businesstype"
-  * Operations: 'count', 'unique', 'sum'
+  * Operations: 'count', 'unique'
 - <b>Join attributes by location</b> from <i>intersections</i> layer
   * Field: "id"
   * Operation: 'count' <br>

@@ -49,11 +49,7 @@ Pre process business licenses
 ```
 * <b>Extract by expression</b> walkability-related business types
 ```
-"businesstype" =  'Retail Dealer' or
-"businesstype" = 'Retail Dealer - Food' or
-"businesstype" = 'Retail Dealer - Grocery' or
-"businesstype" = 'Retail Dealer - Market Outlet' or
-"businesstype" = 'Liquor Retail Store'
+"businesstype" = 'Retail Dealer' or "businesstype" = 'Retail Dealer - Food' or "businesstype" = 'Retail Dealer - Grocery' or "businesstype" = 'Retail Dealer - Market Outlet' or "businesstype" = 'Liquor Retail Store'
 ```
 * <b>Reproject</b> business licenses
 * <b>Extract by locations</b> points within analyzed boundary
