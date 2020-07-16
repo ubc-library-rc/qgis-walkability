@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 4. Analyze
+title: 4. Calculate
 nav_order: 5
 ---
 
