@@ -12,8 +12,8 @@ Network analysis
 - Extract <b>Service area (from layer)</b>
   * Vector layer representing the network: <em>street_network</em>
   * Vector layer with start points: <em>centroids</em>
-  * Travel cost: 800
-![800m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
+  * Travel cost: 600
+![600m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
 {: .step}
 
 Spatial join

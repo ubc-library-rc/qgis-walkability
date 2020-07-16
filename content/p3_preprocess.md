@@ -49,7 +49,11 @@ Pre process business licenses
 ```
 * <b>Extract by expression</b> walkability-related business types
 ```
-"businesstype" != 'Apartment House' and "businesstype" != 'Apartment House Strata' and "businesstype" !=  'Auto Dealer' and "businesstype" != 'Auto Detailing' and "businesstype" != 'Auto Painter & Body Shop' and "businesstype" != 'Auto Parking Lot/Parkade' and "businesstype" != 'Auto Repairs' and "businesstype" != 'Auto Washer' and "businesstype" != 'Bed and Breakfast' and "businesstype" != 'Gas Contractor' and "businesstype" != 'Gasoline Station' and "businesstype" != 'Junk Dealer' and "businesstype" != 'Machinery Dealer' and "businesstype" != 'Manufacturer' and "businesstype" != 'Manufacturer - Food' and "businesstype" != 'Manufacturer - Food with Anc. Retail' and "businesstype" != 'Manufacturer with Anc. Retail' and "businesstype" != 'Rentals' and "businesstype" != 'Repair/ Service/Maintenance' and "businesstype" != 'Residential/Commercial' and "businesstype" != 'Sheet Metal Works' and "businesstype" != 'Warehouse Operator' and "businesstype" != 'Warehouse Operator - Food' and "businesstype" != 'Wholesale Dealer - Food' and "businesstype" != 'Wholesale  Dealer' and "businesstype" != 'Wholesale Dealer - Food with Anc. Retail' and "businesstype" != 'Wholesale Dealer w/ Anc. Retail'
+"businesstype" =  'Retail Dealer' or
+"businesstype" = 'Retail Dealer - Food' or
+"businesstype" = 'Retail Dealer - Grocery' or
+"businesstype" = 'Retail Dealer - Market Outlet' or
+"businesstype" = 'Liquor Retail Store'
 ```
 * <b>Reproject</b> business licenses
 * <b>Extract by locations</b> points within analyzed boundary
