@@ -7,23 +7,24 @@ nav_order: 4
 Network analysis
 {: .label .label-step}
 - Connect 'Vancouver.gpkg' by right-clicking on <b>GeoPackage</b> and selecting <b>New Connection...</b>
-- Drag and drop <i>street_network</i> and <i>sample_centroids</i> from the database to QGIS canvas
+- Drag and drop <i>street_network</i> and <i>blocks</i> from the database to QGIS canvas
+- Extract <b>Centroids</b> of <i>blocks</i> layer
 - Extract <b>Service area (from layer)</b>
   * Vector layer representing the network: <em>street_network</em>
-  * Vector layer with start points: <em>sample_centroids</em>
+  * Vector layer with start points: <em>centroids</em>
   * Travel cost: 800
 ![800m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
 {: .step}
 
 Spatial join
 {: .label .label-step}
-- <b>Join attributes by location</b> from <i>intersections</i> layer
-  * Field: "id"
-  * Operation: 'count' <br>
 - <b>Join attributes by location</b> from <i>business</i> layer
   * Fields: "Id" and "businesstype"
   * Operations: 'count', 'unique', 'sum'
-- <b>Join attributes by location</b> from <i>dissemination_area</i> layer
+- <b>Join attributes by location</b> from <i>intersections</i> layer
+  * Field: "id"
+  * Operation: 'count' <br>
+- <b>Join attributes by location</b> from <i>census</i> layer
   * Field: "population density"
   * Operation: 'mean'
 - Save network buffers to GeoPackage
