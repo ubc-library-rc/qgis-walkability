@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 5. Visualize
-nav_order: 6
+title: 4. Visualize
+nav_order: 5
 ---
 
 Visualize results
