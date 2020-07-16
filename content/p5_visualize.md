@@ -25,4 +25,5 @@ Custom basemap
   * Right-click on <i>ESRI Satellite</i> > Properties > Symbology > Grayscale > By lightness
 - Try layer overlay effect
   * Right-click on <i>urban_blocks</i> > Properties > Symbology > Layer rendering > Layer > Overlay
+![Walkability Index](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/walkability_final.png?raw=true)
 {: .step}

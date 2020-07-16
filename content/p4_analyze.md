@@ -31,6 +31,10 @@ Spatial join
   * Join layer: <i>street_intersections</i>
   * Field: "osm_id"
   * Operation: 'count' <br>
+- Rename population density column
+  * Right-click on <i>census</i> > Properties > Fields > Toggle editing mode
+  * Double-click on Population density per square kilometre, 2016 and type pop_den
+  * Toggle editing mode and click on Save
 - <b>Join attributes by location</b> from <i>census</i> layer
   * Input layer: <i>network_buffers</i>
   * Join layer: <i>census</i>
@@ -39,8 +43,21 @@ Spatial join
 - Use <b>Join attributes by field value</b> to merge columns to block layer
   * Input layer: <i>urban_blocks</i>
   * Join layer: <i>network_buffers</i>
-  * Fields: "businesstype_unique", "fid_count", "osm_id_count", "population density_mean"
+  * Table field: "fid"
+  * Fields: "businesstype_unique", "fid_count", "osm_id_count", "pop_den_mean"
 {: .step}
 
 Save joined <i>network_buffers</i> to GeoJSON. Right-click on the layer > Export > Save Features As...
 {: .warn}
+
+*1*{: .circle .circle-blue} Use <b>Field calculator</b> to calculate Z-scores (z_intrs, z_pop_den, z_ret_unique, z_ret_count)
+  ```
+  ("osm_id_count" - mean("osm_id_count")) / stdev("osm_id_count")
+  ("businesstype_unique" - mean("businesstype_unique")) / stdev("businesstype_unique")
+  ("pop_den_mean" - mean("pop_den_mean")) / stdev("pop_den_mean")
+  ("fid_count" - mean("fid_count")) / stdev("fid_count")
+  ```
+*2*{: .circle .circle-blue} Use <b>Field calculator</b> to sum all normalized indicators
+  ```
+  (2 * "z_intrs") + "z_pop_den" + "z_ret_unique" + "z_ret_count"
+  ```
