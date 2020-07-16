@@ -27,7 +27,6 @@ Pre process street network
 * <b>Buffer</b> and dissolve intersections (15m)
 * Convert from <b>Multipart to singleparts</b>
 * Find <b>Centroid</b> of buffers
-* <b>Buffer</b> intersection to create a polygon
 * <b>Extract by locations</b> intersections within boundary
 * Drag and drop <i>intersections</i> to save layer on GeoPackage<br>
 ![Preprocess streets](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_intersections.png?raw=true)
@@ -53,6 +52,5 @@ Pre process business licenses
 ```
 * <b>Reproject</b> business licenses
 * <b>Extract by locations</b> points within analyzed boundary
-* <b>Buffer</b> business without dissolve (50)
 * Drag and drop Businesses to GeoPackage
 {: .step}
