@@ -10,7 +10,7 @@ Network analysis
 - Extract <b>Centroids</b> of <i>urban_blocks</i> layer
 - Extract <b>Service area (from layer)</b>
   * Vector layer representing the network: <em>street_network</em>
-  * Vector layer with start points: <em>centroids</em>
+  * Vector layer with start points: <em>block_centroids</em>
   * Travel cost: 600
 ![600m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
 {: .step}
