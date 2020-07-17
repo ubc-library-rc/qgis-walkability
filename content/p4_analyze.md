@@ -15,7 +15,7 @@ Network analysis
 ![600m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
 {: .step}
 
-Spatial join
+Join attributes to network buffers (by location)
 {: .label .label-step}
 - <b>Buffer</b> <i>business</i> layer
   * Radius: 50
@@ -31,7 +31,7 @@ Spatial join
   * Join layer: <i>street_intersections</i>
   * Field: "osm_id"
   * Operation: 'count' <br>
-- Rename population density column
+- <b>Rename</b> population density column
   * Right-click on <i>census</i> > Properties > Fields > Toggle editing mode
   * Double-click on Population density per square kilometre, 2016 and type pop_den
   * Toggle editing mode and click on Save
@@ -40,6 +40,10 @@ Spatial join
   * Join layer: <i>census</i>
   * Field: "population density"
   * Operation: 'mean'
+{: .step}
+
+Join attributes from network buffers to urban blocks (by field)
+{: .label .label-step}
 - Use <b>Join attributes by field value</b> to merge columns to block layer
   * Input layer: <i>urban_blocks</i>
   * Join layer: <i>network_buffers</i>
