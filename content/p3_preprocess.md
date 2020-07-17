@@ -6,8 +6,7 @@ nav_order: 3
 
 Preprocess urban blocks
 {: .label .label-step}
-* Drag and drop <i>block_outlines.shp</i> to QGIS
-* Drag and drop <i>
+* Drag and drop the layers to QGIS
 * <b>Reproject</b> layer <i>boundaries</i>
 * <b>Reproject</b> layer <i>block_outlines</i>
 * <b>Extract by location</b>
