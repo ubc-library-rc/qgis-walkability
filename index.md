@@ -22,3 +22,5 @@ In this workshop you'll learn how to apply spatial network analysis tools in QGI
    <p>Your browser does not support iframes.</p>
  </iframe>
 </div>
+
+Nicholas Martino | nicholas.martino@hotmail.com
