@@ -22,7 +22,7 @@ Join attributes to network buffers (by location)
 - <b>Join attributes by location</b> from <i>business</i> layer
   * Input layer: <i>network_buffers</i>
   * Join layer: <i>street_intersections</i>
-  * Fields: "fid" and "businesstype"
+  * Fields: "businesstype"
   * Operations: 'count', 'unique'
 - <b>Buffer</b> <i>street_intersections</i> layer
   * Radius: 50
@@ -48,7 +48,7 @@ Join attributes from network buffers to urban blocks (by field)
   * Input layer: <i>urban_blocks</i>
   * Join layer: <i>network_buffers</i>
   * Table field: "fid"
-  * Fields: "businesstype_unique", "fid_count", "osm_id_count", "pop_den_mean"
+  * Fields: "businesstype_unique", "osm_id_count", "pop_den_mean"
 {: .step}
 
 Save joined <i>network_buffers</i> to GeoJSON. Right-click on the layer > Export > Save Features As...
@@ -59,7 +59,7 @@ Save joined <i>network_buffers</i> to GeoJSON. Right-click on the layer > Export
   ("osm_id_count" - mean("osm_id_count")) / stdev("osm_id_count")
   ("businesstype_unique" - mean("businesstype_unique")) / stdev("businesstype_unique")
   ("pop_den_mean" - mean("pop_den_mean")) / stdev("pop_den_mean")
-  ("fid_count" - mean("fid_count")) / stdev("fid_count")
+  ("businesstype_count" - mean("businesstype_count")) / stdev("businesstype_count")
   ```
 *2*{: .circle .circle-blue} Use <b>Field calculator</b> to sum all normalized indicators
   ```
