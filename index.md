@@ -3,7 +3,6 @@ layout: default
 title: Overview
 nav_order: 1
 ---
-## Note: this workshop is in development and not yet complete.
 
 In this workshop you'll learn how to apply spatial network analysis tools in QGIS to estimate and visualize a walkability index based on open data from the [City of Vancouver](https://opendata.vancouver.ca/pages/home/).
 
