@@ -29,6 +29,7 @@ Join attributes to network buffers (by location)
   * Operations: 'count', 'unique'
 - <b>Buffer</b> <i>street_intersections</i> layer
   * Radius: 50
+  [street_intersections_buffer50.geojson](https://github.com/ubc-library-rc/qgis-walkability/raw/master/database/support/street_intersections_buffer50.geojson)
 - <b>Join attributes by location</b> from <i>street_intersections</i> layer
   * Input layer: <i>network_buffers</i>
   * Join layer: <i>street_intersections</i>
@@ -43,6 +44,7 @@ Join attributes to network buffers (by location)
   * Join layer: <i>census</i>
   * Field: "population density"
   * Operation: 'mean'
+  [urban_blocks_netbuffer_joined.geojson](https://github.com/ubc-library-rc/qgis-walkability/raw/master/database/support/urban_blocks_netbuffer_joined.geojson)
 
 {: .step}
 
@@ -61,11 +63,13 @@ Save joined <i>network_buffers</i> to GeoJSON. Right-click on the layer > Export
 *1*{: .circle .circle-blue} Use <b>Field calculator</b> to calculate Z-scores (z_intrs, z_pop_den, z_ret_unique, z_ret_count)
   ```
   ("osm_id_count" - mean("osm_id_count")) / stdev("osm_id_count")
-  ("businesstype_unique" - mean("businesstype_unique")) / stdev("businesstype_unique")
   ("pop_den_mean" - mean("pop_den_mean")) / stdev("pop_den_mean")
+  ("businesstype_unique" - mean("businesstype_unique")) / stdev("businesstype_unique")
   ("businesstype_count" - mean("businesstype_count")) / stdev("businesstype_count")
   ```
 *2*{: .circle .circle-blue} Use <b>Field calculator</b> to sum all normalized indicators
   ```
   (2 * "z_intrs") + "z_pop_den" + "z_ret_unique" + "z_ret_count"
   ```
+
+[urban_blocks_original_joined.geojson](https://github.com/ubc-library-rc/qgis-walkability/raw/master/database/support/urban_blocks_original_joined.geojson)
