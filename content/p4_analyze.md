@@ -8,17 +8,20 @@ Network analysis
 {: .label .label-step}
 - Drag and drop GeoJSON files to QGIS canvas
 - Extract <b>Centroids</b> from <i>urban_blocks</i> layer
+[urban_blocks_centroids.geojson](https://github.com/ubc-library-rc/qgis-walkability/raw/master/database/support/urban_blocks_centroids.geojson)
 - Extract <b>Service area (from layer)</b>
   * Vector layer representing the network: <em>street_network</em>
   * Vector layer with start points: <em>block_centroids</em>
   * Travel cost: 300
 ![600m Buffer Radius](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/map_buffers.png?raw=true)
+[urban_blocks_netbuffer.geojson](https://github.com/ubc-library-rc/qgis-walkability/raw/master/database/support/urban_blocks_netbuffer.geojson)
 {: .step}
 
 Join attributes to network buffers (by location)
 {: .label .label-step}
 - <b>Buffer</b> <i>business</i> layer
   * Radius: 50
+  [retail_business_buffer50.geojson](https://github.com/ubc-library-rc/qgis-walkability/raw/master/database/support/retail_business_buffer50.geojson)
 - <b>Join attributes by location</b> from <i>business</i> layer
   * Input layer: <i>network_buffers</i>
   * Join layer: <i>street_intersections</i>
@@ -40,6 +43,7 @@ Join attributes to network buffers (by location)
   * Join layer: <i>census</i>
   * Field: "population density"
   * Operation: 'mean'
+
 {: .step}
 
 Join attributes from network buffers to urban blocks (by field)
