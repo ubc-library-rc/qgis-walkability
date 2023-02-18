@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Resources
-nav_order: 5
+nav_order: 10
 ---
 
 *1*{: .circle .circle-blue} [Official QGIS documentation on Network Analysis](https://docs.qgis.org/3.10/en/docs/training_manual/vector_analysis/network_analysis.html)<br><br>
