@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 4. Visualize
+title: Visualize Index
 nav_order: 5
 ---
 

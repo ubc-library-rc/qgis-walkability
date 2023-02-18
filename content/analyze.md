@@ -1,8 +1,10 @@
 ---
 layout: default
-title: 3. Aggregate
+title: Network Analysis 
 nav_order: 4
 ---
+
+## 3. Aggregate
 
 Network analysis
 {: .label .label-step}

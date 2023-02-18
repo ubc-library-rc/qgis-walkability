@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Set-Up
-nav_order: 4
+nav_order: 3
 parent: Introduction 
 ---
 # Setting up a QGIS Project 
