@@ -5,53 +5,16 @@ nav_order: 6
 parent: Processing
 ---
 
+<span style="font-size:15px;"> Process street network: get intersections</span> 
+{: .label .label-step .purple}
 
-Preprocess urban blocks
-{: .label .label-step}
-* Drag and drop the layers to QGIS
-* <b>Reproject</b> layer <i>boundaries</i>
-* <b>Reproject</b> layer <i>block_outlines</i>
-* <b>Extract by location</b>
-  * Extract features from: <i>blocks_reprojected</i>
-  * By comparing features from: <i>boundaries_reprojected
-* Get <b>Centroid</b> of layer <i>blocks_extracted</i>
-* <b>Buffer</b> and dissolve <i>centroids</i> (800m)
-* Drag and drop Blocks, Centroids and Boundary to save layers on GeoPackage<br>
-![Preprocess samples](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_samples.png?raw=true)
-{: .step}
-
-Pre process street network
-{: .label .label-step}
-* <b>Reproject</b> line geometry
-* <b>Fix geometries</b> of street centerline layer
-* Extract line intersections
-* <b>Buffer</b> and dissolve intersections (15m)
-* Convert from <b>Multipart to singleparts</b>
-* Find <b>Centroid</b> of buffers
-* <b>Extract by locations</b> intersections within boundary
-* Drag and drop <i>intersections</i> to save layer on GeoPackage<br>
-![Preprocess streets](https://github.com/ubc-library-rc/qgis-walkability/blob/master/images/preprocess_intersections.png?raw=true)
-{: .step}
-
-Pre process dissemination area
-{: .label .label-step}
-* Open census DA
-* <b>Fix geometries</b> from census polygon
-* <b>Extract by location</b> DAs within boundary
-* Drag and drop Census to save layer on GeoPackage
-{: .step}
-
-Pre process business licenses
-{: .label .label-step}
-* <b>Extract by expression</b> only valid licenses
-```
-"expireddate" >  to_date('2020-07-17’)
-```
-* <b>Extract by expression</b> walkability-related business types
-```
-"businesstype" = 'Retail Dealer' or "businesstype" = 'Retail Dealer - Food' or "businesstype" = 'Retail Dealer - Grocery' or "businesstype" = 'Retail Dealer - Market Outlet' or "businesstype" = 'Liquor Retail Store'
-```
-* <b>Reproject</b> business licenses
-* <b>Extract by locations</b> points within analyzed boundary
-* Drag and drop Businesses to GeoPackage
+* Until specified, all output files can be temporary files. 
+* Run **Line Intersections** tool on <i>street-networks</i>. You can find it under Vector --> Analysis Tools, or simply by searching for it in the Help menu at the top of your screen. Both the Input and Intersection layer will be <i>street-network</i>
+* On the resulting <i>Intersections</i>, run a 15m <b>Buffer</b> selecting the option to **Dissolve result** 
+* Convert  the resulting <i>Buffered</i> from <b>Multipart to singleparts</b> using the tool by that name. Find it under Vector --> Geometry Tools, or by searching the Help menu. 
+* Find <b>Centroid</b> of <i>Singlepart arts</i>. The Centroid tool is also under Vector --> Geometry Tools. <br><br>
+![intersections-vs-centroids](./images/intersections-vs-centroids_20230219.jpg)
+* Export the resulting <i>Centroids</i> as ***street-intersections*** in GeoJSON format to your workshop-data folder.
+* Remove all temporary layers and save your QGIS project
+<!-- * <b>Extract by locations</b> intersections (within boundary unce. boundary isnt aerial buffer? if so, would have had to find centroids of intersections within that area - this step is unclear whether it wants intersections or buffer centroids - going with centroids for now) maybe can just skip this?  -->
 {: .step}
