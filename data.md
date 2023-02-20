@@ -11,14 +11,26 @@ The first step is to download and install the data and softwares necessary to ma
 
 The geospatial data used in the workshop can be downloaded in .GeoJSON format from the City of Vancouver open data catalogue and from Statistics Canada. Street network data is from Open Street Map. 
 
-* [Download block outlines](https://opendata.vancouver.ca/explore/dataset/block-outlines/download/?format=geojson&timezone=America/Los_Angeles&lang=en)
+[Download and extract workshop-data](./content/workshop-data.zip){: .btn .btn-blue }
+<br>
+( folder not finalized)
+
+
+<!-- * [Download block outlines](https://opendata.vancouver.ca/explore/dataset/block-outlines/download/?format=geojson&timezone=America/Los_Angeles&lang=en)
 * [Download business licenses](https://opendata.vancouver.ca/explore/dataset/business-licences/download/?format=geojson&timezone=America/Los_Angeles&lang=en)
 * [Download 2021 census dissemination areas](./content/data/census-DAs.geojson)
-* [Download street networks](./content/data/OSM-street-network.geojson)
+* [Download street networks](./content/data/OSM-street-network.geojson) -->
 
 
-Create a folder titled **workshop-data** and drag all the workshop data you just downloaded into it. This will help you stay organized as you work, especially since we will be creating multiple new files during the workshop.
+
+<br>
+
+The data Because datasets like that of all businesses for the entire city are quite large, they require a great deal of time and (your computer's) capacity to process. For this reason, today's workshop focuses on the areas of Vancouver north of Broadway. The data downloaded above is already clipped to this area of interest. If you would like to develop a walkability index for the entire city on your own time, you may download the full datasets here:<br><br>
+[Businesses](https://opendata.vancouver.ca/explore/dataset/business-licences/download/?format=geojson&timezone=America/Los_Angeles&lang=en)<br>[OSM Street Networks](./content/data/OSM-street-network.geojson)<br>[Urban-Blocks](https://opendata.vancouver.ca/explore/dataset/block-outlines/download/?format=geojson&timezone=America/Los_Angeles&lang=en)
 {: .note}
+
+<!-- Create a folder titled **workshop-data** and drag all the workshop data you just downloaded into it. This will help you stay organized as you work, especially since we will be creating multiple new files during the workshop.
+{: .note} -->
 
 <br>
 
