@@ -11,9 +11,6 @@ Urban blocks will be used as samples, so in the end, each block will be scored w
 workflow overview 
 preprocesss, do network analysis (agreggate)/analyzie - Visualize 
 
-because large files, going to do on broadway down becuase otherwise files generated would be too large? 
-buffer around area 
-then have to extract block information bc not in? 
 
 ## Pre-processing 
 Before we can perform spatial network analysis we first must run some geoprocessing 

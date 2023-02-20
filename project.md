@@ -23,7 +23,6 @@ parent: Introduction
 - census-DAs.geojson
 - urban-blocks.geojson
 - street-networks.geojson
-- aoi-boundary.geojson
 
 
 <!-- - street-networks.geojson
