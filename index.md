@@ -19,25 +19,12 @@ By the end of this workshop you will have experience:
 - visualizing network analysis for map layout
   <br>
 
-### Install QGIS
-
+## Pre-Workshop Set-Up
 Before taking this workshop, make sure you have a recent version of QGIS installed on your computer. You can download the software application directly from [qgis.org](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release. This will give you most of the functionality you'll need, without encountering the software bugs of newly released versions.
-
-
 
 QGIS is a popular desktop GIS software, and considered a **f**ree and **o**pen **s**ource **s**oftware **(FOSS)** with a very active development community. The QGIS [user manual](https://docs.qgis.org/3.22/en/docs/user_manual/index.html) provides extensive documentation should you be interested in learning more on your own.
 
 <br>
-<br>
-
-#### Network Analysis Resources
-
-- [Official QGIS documentation on Network Analysis](https://docs.qgis.org/3.10/en/docs/training_manual/vector_analysis/network_analysis.html)<br>
-- [Quick spatial network analysis tutorial using QGIS](https://www.youtube.com/watch?v=WzT9_jMbBDw)<br>
-- [City of Vancouver open data catalogue](https://opendata.vancouver.ca/)<br>
-- [International comparison of observation-specific spatial buffers](http://ij-healthgeographics.biomedcentral.com/articles/10.1186/s12942-017-0077-9)<br>
-- [OSMnx: Python for Street Networks](https://geoffboeing.com/2016/11/osmnx-python-street-networks/)<br>
-  <br>
 
 #### Geospatial Information Resources at UBC:
 
