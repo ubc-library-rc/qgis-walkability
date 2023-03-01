@@ -23,7 +23,7 @@ parent: Introduction
 
 - census-DAs.geojson
 - urban-blocks.geojson
-- street-networks.geojson
+- street-network.geojson
 
 
 <!-- - street-networks.geojson
