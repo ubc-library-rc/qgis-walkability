@@ -1,5 +1,5 @@
 # Spatial network analysis
-Walkability analysis workshop using QGIS
+Re-working workshop to focus on advanced spatial analysis in QGIS
 
 Link to workshop: https://ubc-library-rc.github.io/qgis-walkability/
 
