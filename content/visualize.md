@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Visualize Index
-nav_order: 5
+title: Visualize
+nav_order: 7
+parent: Network Analysis
 ---
 
 Visualize results
