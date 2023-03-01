@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Network Analysis 
-nav_order: 4
+title: Aggregate
+nav_order: 6
+parent: Network Analysis
 ---
 
 ## 3. Aggregate
