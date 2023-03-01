@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Processing
-nav_order: 2
+title: Process
+nav_order: 5
+parent: Network Analysis
 ---
 # Walkability Index
 what is it and how will we get there
