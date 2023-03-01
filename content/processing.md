@@ -2,7 +2,6 @@
 layout: default
 title: Processing
 nav_order: 2
-has_children: true
 ---
 # Walkability Index
 what is it and how will we get there
@@ -24,11 +23,7 @@ To skip the preprocessing step, download -- create zip from GitHub.
 {: .warn}
 
 ---
-layout: default
-title: Directions
-nav_order: 6
-parent: Processing
----
+
 
 <span style="font-size:15px;"> Process street network: get intersections</span> 
 {: .label .label-step}
