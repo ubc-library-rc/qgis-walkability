@@ -18,7 +18,7 @@ To skip this step you may find the pre-processed data in the workshop-data subfo
 {: .note}
 
 ---
-*Until specified, all output files can be temporary files.*
+*Until specified, all geoprocessing may be run with outputs left as temporary files.*
 
 <!-- *1*{: .circle .circle-purple}  **Process street-network: get intersections** -->
 <br>
@@ -76,10 +76,11 @@ To skip this step you may find the pre-processed data in the workshop-data subfo
 * Return to your QGIS interface. Export *selected features* from the *business-licences* layer. Set the CRS to that of the project (EPSG:26910) and keep the output format GeoJSON. Save the layer to your workshop-data folder and name it ***businesses***.    
 
 * Remove *business-licences* from your Layers panel. 
-![selected-businesses](./images/selected-businesses.jpg)
+![selected-businesses](./images/selected-businesses_20220405.jpg)
 {: .step}
 
-You should now have the following additional layers in your workshop-data folder
+--- 
+You should now have the following additional layers in your workshop-data folder:
 
 - street-intersections
 - block-centroids
@@ -92,4 +93,4 @@ These processed layers will be used in the network analysis we will perform next
 - urban-blocks
 - census-DAs
 
-If you have all these layers, continue to the next section. If not, review the documentation above, or find the layers you need in the *pre-processed* folder of your workshop-data. 
+**If you have all these layers, continue to the next section.** If not, review the documentation above, or find the layers you need in the *pre-processed* folder of your workshop-data. 
