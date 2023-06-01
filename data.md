@@ -23,7 +23,7 @@ The geospatial data used in the workshop can be downloaded in .geoJSON format fr
 
 <br>
 
-The data Because datasets like that of all businesses for the entire city are quite large, they require a great deal of time and (your computer's) capacity to process. For this reason, today's workshop focuses on areas of the city north of Broadway. The data downloaded above is already clipped to this area of interest. If you would like to develop a walkability index for the entire city on your own time, you may download the full datasets here:<br><br>
+The data Because datasets like that of all businesses for the entire city are quite large, they require a great deal of time and (your computer's) capacity to process. For this reason, today's workshop focuses the neighborhoods of Downtown, Strathcona, and Grandview-Woodland. The data downloaded above is already clipped to this area of interest. If you would like to develop a walkability index for the entire city on your own time, you may download the full datasets here:<br><br>
 [Businesses](https://opendata.vancouver.ca/explore/dataset/business-licences/map/?disjunctive.status&disjunctive.businesssubtype&location=12,49.26904,-123.13494)<br>[OSM Street Networks](./content/data/OSM-street-network.geojson)<br>[Urban-Blocks](https://opendata.vancouver.ca/explore/dataset/block-outlines/download/?format=geojson&timezone=America/Los_Angeles&lang=en)
 {: .note}
 
