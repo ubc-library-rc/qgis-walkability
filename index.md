@@ -7,17 +7,16 @@ has_children: true
 
 # Advanced QGIS: Spatial Network Analysis
 
-In this workshop you'll learn how to apply spatial network analysis tools in QGIS to estimate and visualize a walkability index based on open data from the [City of Vancouver](https://opendata.vancouver.ca/pages/home/). The geoprocessing workflows employed in this workshop require prerequisite familiarity with the QGIS interface and basic spatial analysis tools. Checkout the Research Commons' workshop on [map making with QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/) if you're new to GIS.
+In this workshop you'll learn how to apply spatial analysis tools in QGIS to estimate and visualize a walkability index based on open data from the [City of Vancouver](https://opendata.vancouver.ca/pages/home/). The geoprocessing workflows employed in this workshop require prerequisite familiarity with the QGIS interface and basic spatial analysis tools. Checkout the Research Commons' workshop on [map making with QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/) if you're new to GIS.
 
 <br>
 By the end of this workshop you will have experience:
 
-- using graphical models to visualize and deploy complex workflows
+- building expressions to extract spatial data
 - joining layers both by attribute and location
-- performing mathematical operations on attribute fields using field calculator
-- extracting attribute data both by location and expression
+- performing mathematical operations on attribute tables using field calculator
 - visualizing network analysis for map layout
-  <br>
+<br>
 
 ## Pre-Workshop Set-Up
 Before taking this workshop, make sure you have a recent version of QGIS installed on your computer. You can download the software application directly from [qgis.org](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** instead of the latest release. This will give you most of the functionality you'll need, without encountering the software bugs of newly released versions.
