@@ -19,7 +19,7 @@ parent: Introduction
 *3*{: .circle .circle-purple} In the Browser panel to the left of your screen, right click "Favorites" and connect the workshop-data folder as a favorite directory. Once connected, expand the folder to see its contents. 
 <br>    
 <br>
-*4*{: .circle .circle-purple} Add the following layers **in order** to your map canvas: 
+*4*{: .circle .circle-purple} Add the following layers **in order** to your map canvas so that streets are the last layer to be added: 
 
 - urban-blocks.geojson
 - census-DAs.geojson
@@ -27,9 +27,7 @@ parent: Introduction
 
 The automatic symbology (i.e. styling) given to your layers may differ - feel free to change it now. 
 
-<br>       
-
-![initial-canvas-view](./content/images/starting-view_20230602.jpg)
+![initial-canvas-view](./content/images/starting-view_20230612.jpg)
 
 <b>Increasing Icon and Font Size</b><br>If you find the current icon and font sizes of your QGIS interface to be too small, you can increase them. Go to the **Settings** menu at the top of your screen and click on **Options**<br><br>
 Resize the dialogue box so you can see the drop-down for "icon size" and "font." Icon changes will happen as soon as you click OK. Changes in font size won't update until you quit and restart QGIS, so make sure you save your project now.
