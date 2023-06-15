@@ -64,7 +64,7 @@ parent: Network Analysis
 
 <span style="font-size:15px;"> Join attributes from service area network buffer to urban blocks</span> 
 {: .label .label-step}
-- Use **Join attributes by field value** to merge field calculations to area file
+- Use **Join attributes by field value** to merge field calculations to polygon layer
   * Input layer: *urban-blocks*
   * Table field: geo_point_2d
   * Input layer 2: *Network-Buffers_Joined*
