@@ -14,7 +14,6 @@ parent: Network Analysis
   * Vector layer with start points: *block-centroids*
   * Travel cost: 300 
 * Save output as ***street-network-buffer*** 
-<!--issue is that fid isnt saved and subsequent joins output each join layer and dont join atts to initial table-->
 {: .step}
 
 <span style="font-size:15px;"> Buffer network inputs and join attributes
@@ -28,7 +27,7 @@ parent: Network Analysis
   * Fields to summarize: "businesstype"
   * Summaries to calculate: 'count', 'unique'
   * Right click the output *Join layer* and rename the temporary layer to *businesstype* without saving it
-  * Remove *Buffered* 
+  * Remove *Buffered*
 - Run a 50m **Buffer** on the processed layer *street_intersections*. Do **not** dissolve result. 
 - **Join attributes by location (summary)** 
   * Base layer:  *street-network-buffer*
@@ -61,6 +60,7 @@ parent: Network Analysis
   * The output *Join layer* will be highlighted in the layers panel. Save it as a permanent layer called **Network-Buffers_Joined**
   * Remove all temporary layers and save your QGIS project
 {: .step}
+
 
 <span style="font-size:15px;"> Join attributes from service area network buffer to urban blocks</span> 
 {: .label .label-step}
