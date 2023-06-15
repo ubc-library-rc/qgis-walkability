@@ -11,7 +11,7 @@ The first step is to download and install the data and software necessary to run
 <br>
 Download the workshop-data folder below and **extract its contents**.     
     
-[WORKSHOP-DATA](./content/workshop-data.zip){: .btn .btn-blue }
+[WORKSHOP-DATA](./workshop-data.zip){: .btn .btn-blue }
 <br><br>
 
 The geospatial data used in the workshop is from the City of Vancouver open data catalogue and from Statistics Canada. Street network data is from Open Street Map. Because datasets like that of businesses for the entire city are quite large, they require a great deal of time and (your computer's) capacity to process. For this reason, today's workshop is focused on downtown only. The data downloaded above is already clipped to this area of interest. If you would like to develop a walkability index for the entire city on your own time, you may download the full datasets for businesses, streets, & urban blocks below:<br><br>
