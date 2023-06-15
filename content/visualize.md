@@ -6,15 +6,12 @@ parent: Network Analysis
 ---
 
 # Visualize Walkability Index
-The final step is the change the symbology of the *walkability-index* layer to visualize the index calculated in the prior steps.     
+The final step of this workshop is to display the walkability index using a graduated color scheme. 
 
-
-Display walkability index using graduated scheme    
-
-  * Right-click on the layer select <b>Properties</b> and go to <b>Symbology</b>
+- Open the **Symbology** of *walkability-index*
   * From the upper bar, change symbology from Single symbol to **Graduated**
-  * Choose **walkability** for the value and click **Classify** to run classification
-  * Then click **Apply** and drag the dialogue box to the side in order to see the results visualized on the map canvas 
+  * Choose **walkability** for the value and click **Classify** to run the classification
+  * Then, click **Apply** and drag the dialogue box to the side in order to see the results rendered on the map canvas 
 
 Try different color ramps and classification modes. Experiment by increasing or decreasing the number of classes and even making your own custom color ramp. Here is one possible visualization...
 
