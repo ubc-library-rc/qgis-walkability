@@ -6,8 +6,8 @@ parent: Network Analysis
 ---
 
 # Visualize Walkability Index
+The final step is the change the symbology of the *walkability-index* layer to visualize the index calculated in the prior steps.     
 
-## Change Symbology     
 
 Display walkability index using graduated scheme    
 
