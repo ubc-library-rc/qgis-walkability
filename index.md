@@ -5,7 +5,7 @@ nav_order: 1
 has_children: true
 ---
 
-# Advanced QGIS: Spatial Network Analysis
+# Spatial Network Analysis with QGIS
 
 In this workshop you'll learn how to apply spatial analysis tools in QGIS to estimate and visualize a walkability index based on open data from the [City of Vancouver](https://opendata.vancouver.ca/pages/home/). The geoprocessing workflows employed in this workshop require prerequisite familiarity with the QGIS interface and basic spatial analysis tools. Checkout the Research Commons' workshop on [map making with QGIS](https://ubc-library-rc.github.io/gis-intro-qgis/) if you're new to GIS.
 
