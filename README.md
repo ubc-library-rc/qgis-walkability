@@ -4,10 +4,10 @@ In this workshop you'll learn how to apply spatial analysis tools in QGIS to est
 
 By the end of this workshop you will be able to:
 
-- build expressions to extract spatial data
-- join spatial layers both by attribute and by location
-- perform mathematical operations on attribute tables using the Field Calculator tool
-- visualize the results of network analysis 
+- build expressions to extract information from spatial data
+- join layers both by attribute and by location
+- perform mathematical operations on attribute tables
+- visualize the results of a network analysis 
 
 [LINK to workshop](https://ubc-library-rc.github.io/qgis-walkability/)
 
