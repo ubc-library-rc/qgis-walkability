@@ -20,7 +20,7 @@ Try different color ramps and classification modes. Experiment by increasing or 
 <img src="./images/walkability-index-visualized_20230608.jpg" style="width:90%"> 
 
 
-## Add Basemap    
+# Add Basemap    
 Even though Vancouver currently appears to be floating in a sea of white, your shapefiles is georeferenced meaning QGIS knows where on Earth Vancouver is. Adding a basemap helps give your map spatial context. There are many ways to go about this.   
 
 To add a tile layer from a web server:
@@ -32,7 +32,7 @@ To add a tile layer from a web server:
 
 <img src="./images/esri-basemap-index_20230608.jpg" style="width:90%">
 
-## OPTIONAL: Add basemap from web plugin
+# OPTIONAL: Add basemap from web plugin
 Another way to add a basemap is through a plugin. This will connect access to a host of different basemaps you can search directly from the QGIS interface. [QGIS plugins](https://plugins.qgis.org/) are user developed tools that extend QGIS functionality beyond the basics. To access basemaps, we'll first install the QuickMapServices plugin. Click on the **Plugin** menu at the top of your screen and select **Manage and Install Plugins...**   
 
 <img src="./images/install-plugin_20221024.jpg" style="width:80%"> 

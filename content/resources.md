@@ -5,7 +5,7 @@ nav_order: 19
 ---
 
 
-### Network Analysis Resources
+## Network Analysis Resources
 
 - [Official QGIS documentation on Network Analysis](https://docs.qgis.org/3.10/en/docs/training_manual/vector_analysis/network_analysis.html)<br>
 - [Quick spatial network analysis tutorial using QGIS](https://www.youtube.com/watch?v=WzT9_jMbBDw)<br>
@@ -14,7 +14,7 @@ nav_order: 19
 - [OSMnx: Python for Street Networks](https://geoffboeing.com/2016/11/osmnx-python-street-networks/)<br>
   <br>
 
-### Downloading OSM Street Networks with QGIS Plugin 
+## Downloading OSM Street Networks with QGIS Plugin 
 The OSM street networks layer provided pre-processed for this workshop was downloaded from inside QGIS using a plugin called QuickOSM. If you are interested in working with street network data for another location, follow the directions below to download it yourself. 
       
 Open QGIS and create a new blank project and connect your workshop-data folder as a favorite directory in the browser panel. Add **census-DAs.geojson** to your map canvas. 
