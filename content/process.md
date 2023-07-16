@@ -70,7 +70,7 @@ Your Expression should look as follows:
 
 *3*{: .circle .circle-purple} Return to the map canvas. From the layers panel, right click *business-licenses* and go to Export > **Save Selected Features As**
 - Keep the output format as GeoJSON
-- Set the CRS to the Project CRS(EPSG:26910 - NAD83/UTM zone 10N)
+- **Set the CRS to the Project CRS(EPSG:26910 - NAD83/UTM zone 10N)**
 - Now save the layer as ***businesses*** to your workshop-data folder
 - Remove *business-licences* from the Layers panel
 ![selected-businesses](./images/selected-businesses_20230715.jpg)
