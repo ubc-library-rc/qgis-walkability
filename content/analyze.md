@@ -5,91 +5,145 @@ nav_order: 6
 parent: Network Analysis
 ---
 
-<span style="font-size:15px;"> Extract Service Area
-</span> 
-{: .label .label-step} 
-- Extract **Service area (from layer)**
-  * Vector layer representing network: *street-network*
-  * Path type to calculate: Shortest
-  * Vector layer with start points: *block-centroids*
-  * Travel cost: 300 
-* Save output as ***street-network-buffer*** 
-{: .step}
+There are three parts to the following network analysis: 
+- Extract service area 
+- Buffer network inputs and join attributes 
+- Calculate Z-scores    
 
-<span style="font-size:15px;"> Buffer network inputs and join attributes
-</span>
-{: .label .label-step} 
-- Run a 50m **Buffer** on the pre-processed *businesses* layer. Do **not** dissolve result. 
-- **Join attributes by location (summary)** 
-  * Base layer: *street-network-buffer*
-  * Join layer: Buffered layer
-  * Geometric predicate: intersects
-  * Fields to summarize: "businesstype"
-  * Summaries to calculate: 'count', 'unique'
-  * Right click the output *Join layer* and rename the temporary layer to *businesstype* without saving it
-  * Remove *Buffered*
-- Run a 50m **Buffer** on the processed layer *street_intersections*. Do **not** dissolve result. 
-- **Join attributes by location (summary)** 
-  * Base layer:  *street-network-buffer*
-  * Join layer: Buffered layer
-  * Geometric predicate: intersects
-  * Fields to summarize: "osm_id"
-  * Summaries to calculate: 'count'   
-  * Rename the output *Join layer* to *osm*
-  * Remove *Buffered* layer   
-- **Join attributes by location (summary)** 
-  * Base layer: *street-network-buffer*
-  * Join layer: *census*
-  * Fields to summarize: "pop_den"
-  * Summaries to calculate: 'mean'
-  * Rename the output *Join layer* to *popden*
-- Now we need to run a series of joins to merge the field calculations performed above into one attribute table.
-- Run **Join attributes by field value** on the temporary join layer you named *businesstype* 
-  * Input layer: *businesstype*
-  * Table field: geo_point_2d
-  * Input layer 2: *osm*
-  * Table field 2: *geo_point_2d*
-  * Layer 2 fields to copy: *osm_id_count*
-  * Open the attribute table of the resulting *Joined layer* and ensure that *osm_id_count* now appears beside "businesstype_unique" and "businesstype_count"
-- Now run **Join attributes by field value** on that same *Joined layer* 
-  * Input layer: *Joined layer*
-  * Table field: geo_point_2d
-  * Input layer 2: *popden*
-  * Table field 2: *geo_point_2d*
-  * Layer 2 fields to copy: *pop_den_mean*
-  * The output *Join layer* will be highlighted in the layers panel. Save it as a permanent layer called **Network-Buffers_Joined**
-  * Remove all temporary layers and save your QGIS project
-{: .step}
+The first step determines the portion of the street network within service area, i.e. within 300m distance from the center of any given urban block. In the second step, you will join information about businesses, street intersections, and population density to the service area network, then join to the area layer *urban-blocks*. In the final step, you will calculate z-scores to estimate walkability for each block.
+
+---- 
+
+# 1. Extract Service Area
+This step determines the portions of the street network which are within 300 meters distance from the center of any given urban block.     
+
+Run the tool **Service area (from layer)**    
+>Vector layer representing network: *street-network*    
+>Path type to calculate: Shortest    
+>Vector layer with start points: *block-centroids*    
+>Travel cost (distance): 300    
+>Save output as ***service-area-network*** 
+
+The output may appear the same at first glance, if you zoom in you'll see how the service area differs from the original street network:
+
+![service-area](./images/service-area_20230715.jpg)
 
 
-<span style="font-size:15px;"> Join attributes from service area network buffer to urban blocks</span> 
-{: .label .label-step}
-- Use **Join attributes by field value** to merge field calculations to polygon layer
-  * Input layer: *urban-blocks*
-  * Table field: geo_point_2d
-  * Input layer 2: *Network-Buffers_Joined*
-  * Table field 2: geo_point_2d
-  * Layer 2 fields to copy: "businesstype_unique", "businesstype_count", "osm_id_count", "pop_den_mean"
-- **Clip** *Joined layer* to *Census-DAs* because this is the only are we actually have population information for and therefore complete data. 
-  * Save the *Clipped* output to your workshop-data folder and name it **walkability-index** 
-{: .step}
 
-<span style="font-size:15px;"> Use <b>Field calculator</b> to calculate Z-scores 
-</span> 
-{: .label .label-step}
-- Open attribute table of *walkability-index* and toggle on editing mode
-- Create four new fields by pasting the following calculations into **Field calculator**. For each, change **Output field type** to **Decimal number (real)** and keep precision at 3 places. 
+
+----
+# 2.  Buffer network inputs and join attributes  
+
+This step joins attribute information about businesses, street intersections, and population density to the service area network. Because the layers *businesses* and *street-intersections* are point datatypes while *service-area-network* is composed of lines, a small buffer must first be run on *businesses* and *street-intersections* to create an area around each point. The undissolved buffers, retaining the attributes of each point they buffer, can then be spatially joined with the *service-area-network*, the summary of businesses and intersections within each buffer appended to the network's attribute table upon the two layers' spatial intersection. Once information regarding the number of unique businesses and intersections as well as mean population density has been joined to the network as it relates to any given portion of street, *service-area-network* can be joined to *urban-blocks* to merge field calculations to the area layer. *This whole step requires attention to many layers, so take your time as you work through the calculations.*
+    
+
+## Businesses
+- Run a 50m **Buffer** on the pre-processed *businesses* layer. Do **not** dissolve result.     
+
+
+- **Join attributes by location (summary)**   
+>Base layer: *service-area-network*    
+>Join layer: Buffered layer    
+>Geometric predicate: intersects    
+>Fields to summarize: "businesstype"    
+>Summaries to calculate: 'count', 'unique'
+
+- In the Layers panel, right click the output *Join layer* and rename the temporary layer to *businesstype* without saving it       
+    
+- Remove *Buffered* layer
+
+*Note: if you get a warning while entering distance that your layer is in degrees, re project your businesses layer to the Project CRS, EPSG:26910 - NAD83/UTM zone 10N*    
+
+----
+## Street Intersections
+
+- Run a 50m **Buffer** on the processed layer *street_intersections*. Do **not** dissolve result 
+
+- **Join attributes by location (summary)**        
+>Base layer:  *service-area-network*    
+>Join layer: Buffered layer    
+>Geometric predicate: intersects     
+>Fields to summarize: "osm_id"     
+>Summaries to calculate: 'count'       
+
+- Rename the output *Join layer* to *osm*     
+
+- Remove *Buffered* layer 
+
+    
+
+----
+## Census 
+
+- **Join attributes by location (summary)**     
+>Base layer: *service-area-network*    
+>Join layer: *census*
+>Fields to summarize: "pop_den"    
+>Summaries to calculate: 'mean'     
+    
+- Rename the output *Join layer* to *popden*     
+
+---
+## Join Attributes to Service Area Network
+You should now have 3 temporary layers named *businesstype*, *osm*, and *popden*. In order to merge the field calculations performed above into one attribute table, you'll need to run a series of joins: 
+
+- Run **Join attributes by field value** on *businesstype*      
+>Input layer: *businesstype*    
+>Table field: geo_point_2d    
+>Input layer 2: *osm*    
+>Table field 2: *geo_point_2d*    
+>Layer 2 fields to copy: *osm_id_count* 
+
+- Open the attribute table of the resulting *Joined layer* and ensure that *osm_id_count* now appears beside "businesstype_unique" and "businesstype_count"   
+    
+
+- Run **Join attributes by field value** on that same *Joined layer* outputted from the step above    
+>Input layer: *Joined layer*    
+>Table field: geo_point_2d    
+>Input layer 2: *popden*    
+>Table field 2: *geo_point_2d*    
+>Layer 2 fields to copy: *pop_den_mean*    
+    
+- The output *Join layer* will be highlighted in the layers panel. Check the attribute table to ensure the fields *businesstype_unique* *businesstype_count* *osm_id_count* and *pop_den_mean* all appear, then sve it as a permanent layer called **service-network-joined**   
+
+- Remove all temporary layers and save your QGIS project
+
+## Copy Fields to Urban Blocks 
+Join summary fields from service area network to area layer
+
+- **Join attributes by field value**   
+>Input layer: *urban-blocks*    
+>Table field: geo_point_2d    
+>Input layer 2: *service-network-joined*    
+>Table field 2: geo_point_2d    
+>Layer 2 fields to copy: "businesstype_unique", "businesstype_count", "osm_id_count", "pop_den_mean"       
+
+- **Clip** the *Joined layer* to *Census-DAs* because this is the only area for which population data exists.
+
+- Save the *Clipped* output to your workshop-data folder as a permanent file named **walkability-index** 
+
+----
+
+# 3. Calculate Z-scores using Field Calculator      
+  
+*1*{: .circle .circle-purple} Open attribute table of *walkability-index* and toggle on editing mode by clicking the pencil icon in the top left-hand corner of the dialogue box    
+
+*2*{: .circle .circle-purple} Open  **Field calculator** and create four new fields by pasting the following calculations into the expression box. For each, change **Output field type** to **Decimal number (real)** and keep precision at 3 places. 
   ```
-  Field Name        Calculation
+  Field Name        Expression
   z_intrs           ("osm_id_count" - mean("osm_id_count")) / stdev("osm_id_count")
   z_pop_den         ("pop_den_mean" - mean("pop_den_mean")) / stdev("pop_den_mean")
   z_ret_unique      ("businesstype_unique" - mean("businesstype_unique")) / stdev("businesstype_unique")
   z_ret_count       ("businesstype_count" - mean("businesstype_count")) / stdev("businesstype_count")
   ```
-<img src="./images/field-calculator_20230608.jpg" style="width:60%">
-- Create one last field called *walkability* and use <b>Field calculator</b> to sum all normalized indicators
+<img src="./images/field-calculator_20230608.jpg" style="width:45%">
+    
+<br>
+*3*{: .circle .circle-purple} Create one last field called *walkability* and use <b>Field calculator</b> to sum all normalized indicators. Set **Output field type** to **Decimal number (real)** and keep precision at 3 places.     
+
   ```
-  (2 * "z_intrs") + "z_pop_den" + "z_ret_unique" + "z_ret_count"
-  ```
-- Save changes and toggle off editing mode
-{: .step}
+  (2 * "z_intrs") + "z_pop_den" + "z_ret_unique" + "z_ret_count"    
+  ``` 
+
+
+*4*{: .circle .circle-purple} Save edits and toggle off editing mode. Close the attribute table. Congratulations! You have performed a network analysis in QGIS and developed a walkability index for downtown Vancouver.  
