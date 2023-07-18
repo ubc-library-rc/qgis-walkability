@@ -106,7 +106,10 @@ You should now have 3 temporary layers named *businesstype*, *osm*, and *popden*
     
 - The output *Join layer* will be highlighted in the layers panel. Check the attribute table to ensure the fields *businesstype_unique* *businesstype_count* *osm_id_count* and *pop_den_mean* all appear, then sve it as a permanent layer called **service-network-joined**   
 
-- Remove all temporary layers and save your QGIS project
+- Remove all temporary layers and save your QGIS project    
+
+----    
+    
 
 ## Copy Fields to Urban Blocks 
 Join summary fields from service area network to area layer
