@@ -6,7 +6,9 @@ parent: Network Analysis
 ---
 
 # Pre-processing 
-Pre-processing refers to any modifications to your given dataset in preparation for network analysis. For example, the workshop data has already been clipped to the area of interest, a pre-processing step you now don't have to worry about. Before performing a network analysis, however, there is some pre-processing to do. First, we will create a layer of street intersections from *street-networks* that is simplified so as to account for only one intersection at each crossroad. Then we'll create a point layer from *urban-blocks* that contains the centroid of each block. Finally, we'll create a new layer from *business-licences* that contains only retailers with a valid (non-expired) license. 
+Pre-processing refers to any modifications to your given dataset in preparation for network analysis. For example, the workshop data has already been clipped to the area of interest, a pre-processing step you now don't have to worry about. Before performing a network analysis, however, there is some pre-processing to do.     
+    
+First, we will create a layer of street intersections from *street-networks* that is simplified so as to account for only one intersection at each crossroad. Then we'll create a point layer from *urban-blocks* that contains the centroid of each block. Finally, we'll create a new layer from *business-licences* that contains only retailers with a valid (non-expired) license. 
 
 
 To skip this step you may find the pre-processed data in the workshop-data subfolder called **pre-processed**. However, if you have the time, processing the data yourself will exercise your geoprocessing skills and provide continuity to your workflow. Projects outside of this workshop will likely require you to pre-process datasets yourself, so it's useful to practice with guided instructions. 

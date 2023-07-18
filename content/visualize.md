@@ -20,7 +20,7 @@ Try different color ramps and classification modes. Experiment by increasing or 
 <img src="./images/walkability-index-visualized_20230608.jpg" style="width:90%"> 
 
 
-# Add Basemap    
+# Add Basemap     
 Even though Vancouver currently appears to be floating in a sea of white, your shapefiles is georeferenced meaning QGIS knows where on Earth Vancouver is. Adding a basemap helps give your map spatial context. There are many ways to go about this.   
 
 To add a tile layer from a web server:
