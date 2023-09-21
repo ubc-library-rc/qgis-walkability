@@ -7,7 +7,7 @@ parent: Introduction
 
 # Workshop Data 
 
-The first step is to download and install the data and software necessary to run a network analysis. If you haven't already, download the latest version of QGIS from [qgis.org](https://qgis.org/en/site/forusers/download.html). Make sure to download the **long term release** for stable functionality. The current LTR is version 3.28.8 'Firenze'.
+The first step is to download and install the data and software necessary to run a network analysis. If you haven't already, download the latest version of QGIS from [qgis.org](https://qgis.org/en/site/forusers/download.html). Make sure to download the **long term release** for stable functionality. The current LTR is version 3.28.11 'Firenze'.
 <br>
 Download the workshop-data folder below and **extract its contents**.     
     
