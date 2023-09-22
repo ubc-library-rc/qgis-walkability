@@ -34,25 +34,29 @@ The output may appear the same at first glance, if you zoom in you'll see how th
 ----
 # 2.  Buffer network inputs and join attributes  
 
-This step joins attribute information about businesses, street intersections, and population density to the service area network. Because the layers *businesses* and *street-intersections* are point datatypes while *service-area-network* is composed of lines, a small buffer must first be run on *businesses* and *street-intersections* to create an area around each point. The undissolved buffers, retaining the attributes of each point they buffer, can then be spatially joined with the *service-area-network*, the summary of businesses and intersections within each buffer appended to the network's attribute table upon the two layers' spatial intersection. Once information regarding the number of unique businesses and intersections as well as mean population density has been joined to the network as it relates to any given portion of street, *service-area-network* can be joined to *urban-blocks* to merge field calculations to the area layer. *This whole step requires attention to many layers, so take your time as you work through the calculations.*
+This step joins attribute information about businesses, street intersections, and population density to the service area network. Because the layers *businesses* and *street-intersections* are point datatypes while *service-area-network* is composed of lines, a small buffer must first be run on *businesses* and *street-intersections* to create an area around each point. The undissolved buffers, retaining the attributes of each point they buffer, can then be spatially joined with the *service-area-network*. The summary of businesses and intersections within each buffer appended to the network's attribute table upon the two layers' spatial intersection.     
+
+Once information regarding the number of unique businesses and intersections as well as mean population density has been joined to the network as it relates to any given portion of street, *service-area-network* can be joined to *urban-blocks* to merge field calculations to the area layer. *This whole step requires attention to many layers, so take your time as you work through the calculations.*
     
 
 ## Businesses
 - Run a 50m **Buffer** on the pre-processed *businesses* layer. Do **not** dissolve result.     
-
+>*If you get a warning while entering distance that your layer is in degrees, reproject your businesses layer to the Project CRS, EPSG:26910 - NAD83/UTM zone 10N* 
 
 - **Join attributes by location (summary)**   
->Base layer: *service-area-network*    
->Join layer: Buffered layer    
->Geometric predicate: intersects    
+>Join to features in (base layer): *service-area-network*   <!--Join Features In was previously known as Base Layer-->     
+>By comparing to (join layer): Buffered layer    
+>Where the features (geometric predicate): intersect   
 >Fields to summarize: "businesstype"    
 >Summaries to calculate: 'count', 'unique'
+    
+  >When you run the tool, you may get an error "No spatial index exists for join layer, performance will be severely degraded." Do not worry about this. 
 
-- In the Layers panel, right click the output *Join layer* and rename the temporary layer to *businesstype* without saving it       
+- In the Layers panel, right click the temporary output *Joined layer* and Rename Layer to *businesstype*       
     
 - Remove *Buffered* layer
 
-*Note: if you get a warning while entering distance that your layer is in degrees, re project your businesses layer to the Project CRS, EPSG:26910 - NAD83/UTM zone 10N*    
+   
 
 ----
 ## Street Intersections
@@ -60,13 +64,13 @@ This step joins attribute information about businesses, street intersections, an
 - Run a 50m **Buffer** on the processed layer *street_intersections*. Do **not** dissolve result 
 
 - **Join attributes by location (summary)**        
->Base layer:  *service-area-network*    
->Join layer: Buffered layer    
->Geometric predicate: intersects     
+>Join to features in:  *service-area-network*    
+>By comparing to: Buffered layer    
+>Where the features: intersect        
 >Fields to summarize: "osm_id"     
 >Summaries to calculate: 'count'       
 
-- Rename the output *Join layer* to *osm*     
+- Rename the output *Joined layer* to *osm*     
 
 - Remove *Buffered* layer 
 
@@ -76,37 +80,59 @@ This step joins attribute information about businesses, street intersections, an
 ## Census 
 
 - **Join attributes by location (summary)**     
->Base layer: *service-area-network*    
->Join layer: *census*
+>Join to features in: *service-area-network*    
+>By comparing to: *census*
 >Fields to summarize: "pop_den"    
 >Summaries to calculate: 'mean'     
     
-- Rename the output *Join layer* to *popden*     
+- Rename the output *Joined layer* to *popden*     
 
 ---
 ## Join Attributes to Service Area Network
-You should now have 3 temporary layers named *businesstype*, *osm*, and *popden*. In order to merge the field calculations performed above into one attribute table, you'll need to run a series of joins: 
+You should now have 3 temporary layers named *businesstype*, *osm*, and *popden*. In order to merge the field calculations performed above into one attribute table, a series of joins (as illustrated below) must be performed.     
+![joins](./images/join-model.jpg)   
+  
 
-- Run **Join attributes by field value** on *businesstype*      
->Input layer: *businesstype*    
->Table field: geo_point_2d    
->Input layer 2: *osm*    
->Table field 2: *geo_point_2d*    
->Layer 2 fields to copy: *osm_id_count* 
-
-- Open the attribute table of the resulting *Joined layer* and ensure that *osm_id_count* now appears beside "businesstype_unique" and "businesstype_count"   
+While the following is the geoprocessing workflow to perform this series of joins consecutively, to save time, run the **Join Model** included in the workshop-data folder. From within the QGIS GUI, locate the model in your browser panel. Double click it to open. *(If you can't locate the join model within your workshop-data folder, click [HERE](./join-model.model3) to download it and move it into your workshop-data folder.)*    
+    
+Make sure the proper inputs are selected for each parameter, and save the output in your workshop-data folder as service-network-joined. Then hit run. 
     
 
-- Run **Join attributes by field value** on that same *Joined layer* outputted from the step above    
->Input layer: *Joined layer*    
->Table field: geo_point_2d    
->Input layer 2: *popden*    
->Table field 2: *geo_point_2d*    
->Layer 2 fields to copy: *pop_den_mean*    
-    
-- The output *Join layer* will be highlighted in the layers panel. Check the attribute table to ensure the fields *businesstype_unique* *businesstype_count* *osm_id_count* and *pop_den_mean* all appear, then sve it as a permanent layer called **service-network-joined**   
+![join inputs](./images/join-inputs_20230921.jpg)
 
-- Remove all temporary layers and save your QGIS project    
+  
+
+<br>
+
+```html
+Optional workflow for above model:
+    
+- Run Join attributes by field value on *businesstype*      
+        Input layer: businesstype   
+        Table field: geo_point_2d
+        Input layer 2: osm
+        Table field 2: geo_point_2d   
+        Layer 2 fields to copy: osm_id_count 
+
+- Open the attribute table of the resulting Joined layer and 
+ensure that "osm_id_count" now appears beside "businesstype_unique" and "businesstype_count"   
+    
+
+- Run Join attributes by field value on the Joined layer outputted from the step above    
+      Input layer: Joined layer    
+      Table field: geo_point_2d    
+      Input layer 2: popden   
+      Table field 2: geo_point_2d   
+      Layer 2 fields to copy: pop_den_mean    
+    
+- The output layer of this join will be highlighted in the layers panel. 
+Check the attribute table to ensure the fields "businesstype_unique" "businesstype_count" 
+"osm_id_count" & "pop_den_mean" appear.
+
+- Save this final Joined layer as a permanent layer called *service-network-joined*  
+
+- Remove all temporary layers and save your QGIS project
+```
 
 ----    
     

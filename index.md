@@ -19,7 +19,7 @@ By the end of this workshop you will be able to:
 <br>
 
 ## BEFORE the workshop
-Before taking this workshop, make sure you have a recent version of QGIS installed on your computer. You can download the software application directly from [qgis.org](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** (LTR) instead of the latest release. This will give you most of the functionality you'll need, without encountering the software bugs of newly released versions. The current LTR version of QGIS is 3.28.8 'Firenze'.
+Before taking this workshop, make sure you have a recent version of QGIS installed on your computer. You can download the software application directly from [qgis.org](https://qgis.org/en/site/forusers/download.html). In most cases, you'll want to download and install the **Long term release** (LTR) instead of the latest release. This will give you most of the functionality you'll need, without encountering the software bugs of newly released versions. The current LTR version of QGIS is 3.28.11 'Firenze'.
 
 QGIS is a popular desktop GIS software, and considered a **f**ree and **o**pen **s**ource **s**oftware **(FOSS)** with a very active development community. The QGIS [user manual](https://docs.qgis.org/3.28/en/docs/user_manual/index.html) provides extensive documentation should you be interested in learning more on your own.
 

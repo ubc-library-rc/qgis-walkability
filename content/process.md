@@ -8,7 +8,9 @@ parent: Network Analysis
 # Pre-processing 
 Pre-processing refers to any modifications to your given dataset in preparation for network analysis. For example, the workshop data has already been clipped to the area of interest, a pre-processing step you now don't have to worry about. Before performing a network analysis, however, there is some pre-processing to do.     
     
-First, we will create a layer of street intersections from *street-networks* that is simplified so as to account for only one intersection at each crossroad. Then we'll create a point layer from *urban-blocks* that contains the centroid of each block. Finally, we'll create a new layer from *business-licences* that contains only retailers with a valid (non-expired) license. 
+* First, we will create a layer of street intersections from *street-networks* that is simplified so as to account for only one intersection at each crossroad. 
+* Then we'll create a point layer from *urban-blocks* that contains the centroid of each block polygon. 
+* Finally, we'll create a new layer from *business-licences* that contains only retailers with a valid (non-expired) license. 
 
 
 To skip this step you may find the pre-processed data in the workshop-data subfolder called **pre-processed**. However, if you have the time, processing the data yourself will exercise your geoprocessing skills and provide continuity to your workflow. Projects outside of this workshop will likely require you to pre-process datasets yourself, so it's useful to practice with guided instructions. 
@@ -31,7 +33,7 @@ The geoprocessing and analysis tools for vector layers can be found in the **Vec
 
 *4*{: .circle .circle-purple} Find the <b>Centroids</b> of <i>Singlepart parts</i> 
 
-*5*{: .circle .circle-purple} Export the resulting <i>Centroids</i> layer. Save as ***street-intersections*** in GeoJSON format to your workshop-data folder. Remove all temporary layers and save your QGIS project
+*5*{: .circle .circle-purple} Export the resulting <i>Centroids</i> layer. Save as ***street-intersections*** in GeoJSON format to your workshop-data folder. Remove all temporary layers and save your QGIS project.
 <br><br>
 ![intersections-vs-centroids](./images/intersections-vs-centroids_20230715.jpg)    
 
